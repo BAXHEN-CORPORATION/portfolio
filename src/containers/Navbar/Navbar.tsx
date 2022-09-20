@@ -1,10 +1,9 @@
 //** External Imports */
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import React from "react";
 import { Link } from "react-router-dom";
 
 //** Local Imports */

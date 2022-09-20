@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, Route } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
@@ -7,8 +7,6 @@ import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { ColorModeContext } from "./contexts";
 import theme from "./styles/theme";
 import router from "./pages/routes";
-import Navbar from "./containers/Navbar";
-import Footer from "./containers/Footer";
 
 export default function App() {
   const [mode, setMode] = React.useState<"light" | "dark">("light");
