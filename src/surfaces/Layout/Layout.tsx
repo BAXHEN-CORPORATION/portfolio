@@ -2,10 +2,10 @@
 import React from "react";
 import { Outlet } from "react-router";
 
+//** Local Imports */
 import Footer from "../../containers/Footer";
 import Navbar from "../../containers/Navbar";
-
-//** Local Imports */
+import { navLinks } from "./nav-links";
 
 //** Typings */
 export interface LayoutProps {}
@@ -21,7 +21,7 @@ const defaultProps: Partial<LayoutProps> = {};
 const Layout: React.FC<LayoutProps> = () => {
   return (
     <>
-      <Navbar />
+      <Navbar links={navLinks} />
       <Outlet />
       <Footer />
     </>

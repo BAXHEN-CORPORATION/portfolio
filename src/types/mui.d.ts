@@ -59,4 +59,10 @@ declare module "@mui/material" {
     laptop: true;
     desktop: true;
   }
+
+  //** Buttons */
+
+  interface ButtonPropsVariantOverrides {
+    "nav-link": true;
+  }
 }

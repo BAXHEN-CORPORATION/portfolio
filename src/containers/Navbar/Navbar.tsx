@@ -9,9 +9,17 @@ import { Link } from "react-router-dom";
 //** Local Imports */
 
 import logo from "../../assets/logo.jpg";
+import Stack from "@mui/material/Stack";
 
 //** Typings */
-export interface NavbarProps {}
+
+export interface NavLinks {
+  to: string;
+  label: string;
+}
+export interface NavbarProps {
+  links: NavLinks[];
+}
 
 //** Default Props */
 const defaultProps: Partial<NavbarProps> = {};
@@ -21,7 +29,7 @@ const defaultProps: Partial<NavbarProps> = {};
  *
  * @container
  */
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
     <AppBar position="static" elevation={0}>
       <Toolbar sx={{ height: "100px", padding: "0 10rem" }}>
@@ -29,12 +37,19 @@ const Navbar: React.FC<NavbarProps> = () => {
           <img src={logo} alt="logo" style={{ width: "100%" }} />
         </Avatar>
 
-        <Button to="/" component={Link} sx={{ ml: "auto" }}>
-          Home
-        </Button>
-        <Button to="/portfolio" component={Link}>
-          Portfolio
-        </Button>
+        <Stack direction="row" gap="3rem" ml="auto">
+          {links.map(({ to, label }) => (
+            <Button
+              key={to}
+              variant="nav-link"
+              to={to}
+              component={Link}
+              sx={{ ml: "auto" }}
+            >
+              {label}
+            </Button>
+          ))}
+        </Stack>
       </Toolbar>
     </AppBar>
   );

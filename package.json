@@ -2,6 +2,10 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "url": "https://github.com/BAXHEN-CORPORATION/portfolio",
+    "docs": "https://baxhen-corporation.github.io/portfolio"
+  },
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -83,6 +87,7 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "gh-pages": "^4.0.0",
     "prop-types": "^15.8.1",
+    "storybook-addon-react-router-v6": "^0.2.1",
     "webpack": "^5.74.0"
   }
 }

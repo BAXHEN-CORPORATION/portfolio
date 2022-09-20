@@ -37,10 +37,52 @@ let themeOptions: ThemeOptions = {
   },
 };
 
+const theme = createTheme(themeOptions);
+
 //* Other configs
 
 themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
-  components: {},
+  components: {
+    MuiButton: {
+      variants: [
+        {
+          props: {
+            variant: "nav-link",
+          },
+          style: {
+            color: "black",
+            position: "relative",
+            padding: "6px 0",
+            textTransform: "capitalize",
+            minWidth: "unset",
+
+            "&:hover": {
+              backgroundColor: "transparent",
+            },
+            "& .MuiTouchRipple-root": {
+              display: "none",
+            },
+            "&::after": {
+              content: "''",
+              bottom: 7,
+              position: "absolute",
+              height: "2px",
+              backgroundColor: "currentColor",
+              width: "100%",
+              transform: "scaleX(0)",
+              transformOrigin: "bottom left",
+              transition: theme.transitions.create("transform", {
+                duration: 300,
+              }),
+            },
+            "&:hover::after": {
+              transform: "scaleX(1)",
+            },
+          },
+        },
+      ],
+    },
+  },
 });
 
 //** Dark Theme */
@@ -48,7 +90,6 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
 const darkTheme: ThemeOptions = {
   palette: {
     mode: "dark",
-    // neutral: { main: "#64748B", contrastText: "#fff" },
   },
 };
 

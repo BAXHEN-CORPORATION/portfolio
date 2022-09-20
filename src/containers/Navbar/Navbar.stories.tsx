@@ -1,8 +1,10 @@
 import React from "react";
+import { withRouter } from "storybook-addon-react-router-v6";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Navbar from ".";
 import Stack from "@mui/material/Stack";
+import { navLinks } from "../../surfaces/Layout/nav-links";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -10,6 +12,7 @@ export default {
   component: Navbar,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
+  decorators: [withRouter],
 } as ComponentMeta<typeof Navbar>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -26,4 +29,6 @@ const Template: ComponentStory<typeof Navbar> = (args) => (
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Default.args = {};
+Default.args = {
+  links: navLinks,
+};
