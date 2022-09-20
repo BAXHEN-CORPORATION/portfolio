@@ -78,6 +78,9 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
             "&:hover::after": {
               transform: "scaleX(1)",
             },
+            "&:focus::after": {
+              transform: "scaleX(1)",
+            },
           },
         },
       ],
