@@ -1,20 +1,32 @@
 import React from "react";
+import { RouterProvider, Route } from "react-router-dom";
 
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
-import Copyright from "./components/Copyright";
+import { ColorModeContext } from "./contexts";
+import theme from "./styles/theme";
+import router from "./pages/routes";
+import Navbar from "./containers/Navbar";
+import Footer from "./containers/Footer";
 
 export default function App() {
+  const [mode, setMode] = React.useState<"light" | "dark">("light");
+
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Material UI v5 Template - Emotion Engine
-        </Typography>
-        <Copyright />
-      </Box>
-    </Container>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme[mode]}>
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }

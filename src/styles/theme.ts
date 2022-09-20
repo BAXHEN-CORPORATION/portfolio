@@ -1,20 +1,71 @@
-import { red } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
+import { merge } from "lodash";
 
-// A custom theme for this app
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#556cd6",
-    },
-    common: { gray: "#f2f2f2" },
-    secondary: {
-      main: "#19857b",
-    },
-    error: {
-      main: red.A400,
+import {
+  createTheme,
+  responsiveFontSizes,
+  Theme,
+  ThemeOptions,
+} from "@mui/material/styles";
+import blue from "@mui/material/colors/blue";
+
+const customThemeMerge = (
+  theme: ThemeOptions,
+  themeOverride: ThemeOptions
+): Theme => {
+  return responsiveFontSizes(createTheme(merge(theme, themeOverride)));
+};
+
+let themeOptions: ThemeOptions = {
+  typography: {
+    fontFamily: "Poppins",
+  },
+  palette: { primary: { main: blue["100"] } },
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 600,
+      tabletLarge: 900,
+      laptop: 1200,
+      desktop: 1536,
     },
   },
+
+  components: {
+    MuiUseMediaQuery: {
+      defaultProps: { noSsr: true },
+    },
+  },
+};
+
+//* Other configs
+
+themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
+  components: {},
 });
 
-export default theme;
+//** Dark Theme */
+
+const darkTheme: ThemeOptions = {
+  palette: {
+    mode: "dark",
+    // neutral: { main: "#64748B", contrastText: "#fff" },
+  },
+};
+
+//** Light Theme */
+
+const lightTheme: ThemeOptions = {
+  palette: {
+    mode: "light",
+    // neutral: { main: "#64748B", contrastText: "#fff" },
+  },
+};
+
+//* Compiling Themes Modes*/
+
+export const dark = customThemeMerge(darkTheme, themeOptions);
+export const light = customThemeMerge(lightTheme, themeOptions);
+
+const themes = { dark, light };
+
+export default themes;
