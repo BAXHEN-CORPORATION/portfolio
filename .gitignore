@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# docs build
+
+/storybook-static
+
+
 # testing
 /coverage
 
