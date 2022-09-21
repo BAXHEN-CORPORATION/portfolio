@@ -1,15 +1,16 @@
 //** External Imports */
 import React from "react";
-import Box from "@mui/material/Box";
-
-import Stack from "@mui/material/Stack";
-import { NavLinks } from "../../Navbar";
 import { Link, useLocation } from "react-router-dom";
+
+import { Paper } from "@mui/material";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Slide from "@mui/material/Slide";
-import { Paper } from "@mui/material";
+import Stack from "@mui/material/Stack";
 
 //** Local Imports */
+
+import { NavLinks } from "../../Navbar";
 
 //** Typings */
 export interface DrawerProps {
