@@ -16,6 +16,9 @@ const customThemeMerge = (
 };
 
 let themeOptions: ThemeOptions = {
+  navbar: {
+    height: "100px",
+  },
   typography: {
     fontFamily: "Poppins",
   },
@@ -64,7 +67,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
             },
             "&::after": {
               content: "''",
-              bottom: 11,
+              bottom: 8,
               position: "absolute",
               height: "2px",
               backgroundColor: "currentColor",
@@ -76,6 +79,10 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
               }),
             },
             "&:hover::after, &:focus::after": {
+              transform: "scaleX(1)",
+            },
+
+            "&.active::after": {
               transform: "scaleX(1)",
             },
           },
@@ -142,6 +149,23 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
       styleOverrides: {
         sizeLarge: { height: "45px", width: "45px" },
       },
+    },
+    MuiPaper: {
+      variants: [
+        {
+          props: { className: "no-top-elevation" },
+          style: {
+            "&::after": {
+              content: "''",
+              position: "absolute",
+              top: -2,
+              height: "2px",
+              width: "100%",
+              backgroundColor: "inherit",
+            },
+          },
+        },
+      ],
     },
   },
 });
