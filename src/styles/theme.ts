@@ -152,7 +152,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
             backgroundColor: "white",
 
             transition: theme.transitions.create("transform", {
-              duration: 400,
+              duration: 200,
             }),
 
             "&:hover": {
