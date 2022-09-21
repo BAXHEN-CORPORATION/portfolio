@@ -4,7 +4,8 @@
   "private": true,
   "repository": {
     "url": "https://github.com/BAXHEN-CORPORATION/portfolio",
-    "docs": "https://baxhen-corporation.github.io/portfolio"
+    "docs": "https://baxhen-corporation.github.io/portfolio",
+    "live-preview": "https://tiny-macaron-3edcdf.netlify.app"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",

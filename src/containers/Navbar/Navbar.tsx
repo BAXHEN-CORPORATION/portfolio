@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
               component={Link}
               sx={{
                 ml: "auto",
-                display: { tabletLarge: "unset", mobile: "none" },
+                display: { tabletLarge: "inline-flex", mobile: "none" },
               }}
             >
               {label}
