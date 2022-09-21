@@ -64,7 +64,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
             },
             "&::after": {
               content: "''",
-              bottom: 7,
+              bottom: 11,
               position: "absolute",
               height: "2px",
               backgroundColor: "currentColor",
