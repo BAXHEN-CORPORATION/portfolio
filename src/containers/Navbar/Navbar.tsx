@@ -13,6 +13,7 @@ import DragHandleIcon from "@mui/icons-material/DragHandle";
 
 import logo from "../../assets/logo.jpg";
 import Drawer from "./components/Drawer";
+import InfoDrawer from "./components/InfoDrawer";
 
 //** Typings */
 
@@ -73,12 +74,17 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
               </Button>
             ))}
 
-            <IconButton className="variant-nav" size="large" onClick={onToggle}>
+            <IconButton className="nav" size="large" onClick={onToggle}>
               <DragHandleIcon htmlColor="white" fontSize="large" />
             </IconButton>
           </Stack>
         </Toolbar>
       </AppBar>
+      <InfoDrawer
+        open={open}
+        onToggle={onToggle}
+        email="carlos@carloshenrique.com"
+      />
       <Drawer links={links} open={open} />
     </>
   );

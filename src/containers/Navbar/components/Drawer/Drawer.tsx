@@ -26,7 +26,10 @@ const defaultProps: Partial<DrawerProps> = {};
  *
  * @container
  */
-const Drawer: React.FC<DrawerProps> = ({ open, links }) => {
+const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
+  open,
+  links,
+}) => {
   const { pathname } = useLocation();
 
   return (

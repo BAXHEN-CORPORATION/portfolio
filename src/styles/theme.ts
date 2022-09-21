@@ -22,7 +22,7 @@ let themeOptions: ThemeOptions = {
   typography: {
     fontFamily: "Poppins",
   },
-  palette: { primary: { main: blue["100"] } },
+  palette: { primary: { main: blue["100"] }, secondary: { main: "#1f1f1f" } },
   breakpoints: {
     values: {
       mobile: 0,
@@ -93,7 +93,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
     MuiIconButton: {
       variants: [
         {
-          props: { className: "variant-nav" },
+          props: { className: "nav" },
           style: {
             position: "relative",
             backgroundColor: "black",
@@ -140,6 +140,26 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
             "&:hover": {
               backgroundColor: "black",
             },
+            "& .MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
+        {
+          props: { className: "nav-close" },
+          style: {
+            position: "relative",
+            backgroundColor: "white",
+
+            transition: theme.transitions.create("transform", {
+              duration: 400,
+            }),
+
+            "&:hover": {
+              backgroundColor: "white",
+              transform: "rotate(90deg)",
+            },
+
             "& .MuiTouchRipple-root": {
               display: "none",
             },

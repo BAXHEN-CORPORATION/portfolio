@@ -11,7 +11,7 @@ declare module "@mui/material" {
   }
 
   interface CommonColors {
-    orange: string;
+    // darkGray: string;
   }
 
   //** Theme */
@@ -30,16 +30,16 @@ declare module "@mui/material" {
   //* Typography */
 
   interface TypographyVariants {
-    poster: React.CSSProperties;
+    // poster: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
-    poster?: React.CSSProperties;
+    // poster?: React.CSSProperties;
   }
 
   interface TypographyPropsVariantOverrides {
-    poster: true;
+    // poster: true;
     // h6: false;
   }
 

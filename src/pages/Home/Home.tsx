@@ -17,7 +17,7 @@ const defaultProps: Partial<HomeProps> = {};
  */
 const Home: React.FC<HomeProps> = () => {
   return (
-    <Box height="300vh" width="100%">
+    <Box height="calc(100vh - 125px)" width="100%">
       Home
     </Box>
   );
