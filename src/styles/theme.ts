@@ -75,15 +75,73 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
                 duration: 300,
               }),
             },
-            "&:hover::after": {
-              transform: "scaleX(1)",
-            },
-            "&:focus::after": {
+            "&:hover::after, &:focus::after": {
               transform: "scaleX(1)",
             },
           },
         },
       ],
+    },
+
+    MuiIconButton: {
+      variants: [
+        {
+          props: { className: "variant-nav" },
+          style: {
+            position: "relative",
+            backgroundColor: "black",
+
+            "&::before": {
+              content: "''",
+              color: "black",
+              position: "absolute",
+              borderRadius: "50%",
+              border: "1px solid currentColor",
+              height: "43px",
+              width: "43px",
+              left: "0px",
+              top: "0px",
+              borderTop: "none",
+              borderLeft: "none",
+              transition: theme.transitions.create(["top", "left"], {
+                duration: 300,
+              }),
+            },
+
+            "&:hover::before, &:focus::before": { left: "5px", top: "4px" },
+
+            "&::after": {
+              content: "''",
+              color: "black",
+              position: "absolute",
+              borderRadius: "50%",
+              border: "1px solid currentColor",
+              height: "43px",
+              width: "43px",
+              left: "0px",
+              top: "0px",
+              borderTop: "none",
+              borderLeft: "none",
+              transition: theme.transitions.create(["top", "left"], {
+                duration: 400,
+              }),
+            },
+            "&:hover::after, &:focus::after": {
+              left: "9px",
+              top: "8px",
+            },
+            "&:hover": {
+              backgroundColor: "black",
+            },
+            "& .MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
+      ],
+      styleOverrides: {
+        sizeLarge: { height: "45px", width: "45px" },
+      },
     },
   },
 });

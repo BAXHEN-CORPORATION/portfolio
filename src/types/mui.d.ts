@@ -65,4 +65,8 @@ declare module "@mui/material" {
   interface ButtonPropsVariantOverrides {
     "nav-link": true;
   }
+
+  //** IconButtons */
+
+  // interface
 }
