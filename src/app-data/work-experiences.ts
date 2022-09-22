@@ -1,4 +1,11 @@
-export const workExperiences = [
+export interface Experience {
+  title: string;
+  begin: number | string;
+  end: number | string;
+  description: string;
+}
+
+export const workExperiences: Experience[] = [
   {
     title: "Design Now Studio",
     begin: "2021",

@@ -5,7 +5,15 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 
-export const socials = [
+import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { SvgIconTypeMap } from "@mui/material/SvgIcon";
+
+export interface Social {
+  href: string;
+  Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string };
+}
+
+export const socials: Social[] = [
   {
     href: "https://www.linkedin.com",
     Icon: LinkedInIcon,

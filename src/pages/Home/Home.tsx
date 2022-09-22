@@ -2,15 +2,15 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
-import CardActionArea from "@mui/material/CardActionArea";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import LinearProgress from "@mui/material/LinearProgress";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 //** Local Imports */
-import { skills, socials, workExperiences, works } from "app-data";
+import { bestProjects, skills, socials, workExperiences } from "app-data";
+import BestProjects from "components/BestProjects";
+import MySkills from "components/MySkills";
+import Socials from "components/Socials";
+import WorkExperiences from "components/WorkExperiences";
 import photo from "../../assets/main-img.png";
 
 //** Typings */
@@ -58,15 +58,15 @@ const Home: React.FC<HomeProps> = () => {
         }}
       >
         <Box
+          className="sticky"
+          position={{ tabletLarge: "sticky", mobile: "initial" }}
+          top={{ tabletLarge: "28vh", mobile: "initial" }}
+          left={{ tabletLarge: "8vw", mobile: "initial" }}
+          alignSelf={{ tabletLarge: "flex-start", mobile: "center" }}
           width="100%"
           maxWidth={{ tabletLarge: "550px", mobile: "500px" }}
           mb="30px"
           mt="30px"
-          alignSelf={{ tabletLarge: "flex-start", mobile: "center" }}
-          position={{ tabletLarge: "sticky", mobile: "initial" }}
-          top={{ tabletLarge: "28vh", mobile: "initial" }}
-          left={{ tabletLarge: "8vw", mobile: "initial" }}
-          className="sticky"
         >
           <img
             alt="portfolio's owner"
@@ -84,64 +84,17 @@ const Home: React.FC<HomeProps> = () => {
 
           <Typography variant="topic">Some of my skills:</Typography>
 
-          {skills.map(({ name, proficiency, value }, index) => (
-            <Stack key={index} spacing={1}>
-              <Stack direction="row">
-                <Typography variant="section">{name}:</Typography>
-                <Typography variant="section" ml="auto" mr="3rem">
-                  {proficiency}
-                </Typography>
-              </Stack>
-              <LinearProgress
-                variant="determinate"
-                color="secondary"
-                sx={{ backgroundColor: "white" }}
-                value={value}
-              />
-            </Stack>
-          ))}
+          <MySkills skills={skills} />
 
           <Typography variant="topic" mt="2.5rem">
             Work experience:
           </Typography>
 
-          {workExperiences.map(({ title, begin, end, description }, index) => (
-            <Stack key={index} gap=".75rem">
-              <Typography variant="section">
-                {title} ({begin}-{end})
-              </Typography>
-              <Typography variant="content">{description}</Typography>
-            </Stack>
-          ))}
+          <WorkExperiences experiences={workExperiences} />
 
           <Typography variant="topic">Personal favorite projects:</Typography>
 
-          <Stack direction="row" flexWrap="wrap">
-            {works.map(({ name, img }, index) => (
-              <CardActionArea
-                key={index}
-                sx={{
-                  width: { tabletLarge: "33%", tablet: "50%", mobile: "100%" },
-                  position: "relative",
-                  "&::after": {
-                    content: "''",
-                    top: 0,
-                    left: 0,
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    backgroundColor: `rgba(${
-                      index % 1 === 0 ? 255 - index : 0
-                    }, ${index % 2 === 0 ? 255 - index : 0}, ${
-                      index % 3 === 0 ? 255 - index : 0
-                    }, 0.1)`,
-                  },
-                }}
-              >
-                <CardMedia component="img" image={img} alt={name} />
-              </CardActionArea>
-            ))}
-          </Stack>
+          <BestProjects projects={bestProjects} />
         </Stack>
       </Box>
 
@@ -149,32 +102,19 @@ const Home: React.FC<HomeProps> = () => {
         display={{ tabletLarge: "initial", mobile: "none" }}
         width="100%"
         maxWidth={{ tabletLarge: "500px", mobile: "none" }}
-      ></Box>
+      />
+
       <Stack
         gap="2rem"
-        paddingBottom="2.75rem"
+        mb="2.75rem"
         padding={{
-          tabletLarge: "0 0 2.75rem 0",
-          mobile: "0 2.75rem 2.75rem 2.75rem",
+          tabletLarge: "0",
+          mobile: "0 2.75rem",
         }}
         maxWidth={{ tabletLarge: "500px", mobile: "100%" }}
       >
         <Typography variant="topic">Keep in touch:</Typography>
-
-        <Stack direction="row" gap="2rem" pl="5px">
-          {socials.map(({ href, Icon }, index) => (
-            <IconButton
-              key={index}
-              LinkComponent="a"
-              target="_blank"
-              href={href}
-              size="small"
-              sx={{ width: "4px" }}
-            >
-              <Icon color="secondary" fontSize="small" />
-            </IconButton>
-          ))}
-        </Stack>
+        <Socials color="secondary" socials={socials} />
       </Stack>
     </Box>
   );

@@ -14,6 +14,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import logo from "../../../../assets/logo.jpg";
 import { socials } from "../../../../app-data/socials";
+import Socials from "components/Socials";
 
 //** Typings */
 export interface InfoDrawerProps {
@@ -89,20 +90,7 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
           </Typography>
           <Typography variant="info-title">Social</Typography>
 
-          <Stack direction="row" gap="2rem">
-            {socials.map(({ href, Icon }, index) => (
-              <IconButton
-                key={index}
-                LinkComponent="a"
-                target="_blank"
-                href={href}
-                size="small"
-                sx={{ width: "4px" }}
-              >
-                <Icon htmlColor="white" fontSize="small" />
-              </IconButton>
-            ))}
-          </Stack>
+          <Socials socials={socials} htmlColor="white" />
         </Stack>
       </Box>
     </Drawer>
