@@ -69,7 +69,7 @@ const Home: React.FC<HomeProps> = () => {
           className="sticky"
         >
           <img
-            alt="portfolio's owner photo"
+            alt="portfolio's owner"
             style={{ width: "100%", height: "auto" }}
             src={photo}
           />
