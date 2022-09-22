@@ -12,8 +12,8 @@ import CloseIcon from "@mui/icons-material/Close";
 
 //** Local Imports */
 
-import logo from "../../../../assets/logo.jpg";
-import { socials } from "../../../../app-data/socials";
+import logo from "assets/logo.jpg";
+import { socials } from "app-data/socials";
 import Socials from "components/Socials";
 
 //** Typings */
