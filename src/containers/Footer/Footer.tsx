@@ -1,16 +1,15 @@
 //** External Imports */
 import React from "react";
 
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 //** Local Imports */
+import Button from "@mui/material/Button";
 import { navLinks, socials } from "app-data";
 import logo from "assets/logo.jpg";
 import Socials from "components/Socials";
-import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 //** Typings */
