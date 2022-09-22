@@ -13,7 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 //** Local Imports */
 
 import logo from "../../../../assets/logo.jpg";
-import { socials } from "./socials";
+import { socials } from "../../../../app-data/socials";
 
 //** Typings */
 export interface InfoDrawerProps {
@@ -61,22 +61,18 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
         </IconButton>
 
         <Stack gap="1.75rem">
-          <Stack direction="row" alignItems="center" gap="2rem" mb="0.5rem">
+          <Stack direction="row" alignItems="center" gap="1rem" mb="0.5rem">
             <Avatar sx={{ height: "70px", width: "70px" }}>
               <img src={logo} alt="logo" style={{ width: "100%" }} />
             </Avatar>
 
-            <Typography variant="h4" fontWeight={500} color="white">
-              Carlos Henrique
-            </Typography>
+            <Typography variant="info-name">Carlos Henrique</Typography>
           </Stack>
           <Typography variant="body1" fontWeight={500} color="white">
             Fullstack developer using NodeJs in the backend with AngularJs and
             ReactJs in the front-end.
           </Typography>
-          <Typography variant="h5" fontWeight={700} color="white">
-            Where to find me
-          </Typography>
+          <Typography variant="info-title">Where to find me</Typography>
           <Typography variant="body1" fontWeight={500} color="white">
             Phone: +55 (11) 94872-5475
           </Typography>
@@ -86,15 +82,12 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
             variant="body1"
             fontWeight={500}
             fontSize="18px"
-            letterSpacing="-.02em"
             color="white"
             sx={{ textDecoration: "none" }}
           >
             {email}
           </Typography>
-          <Typography variant="h5" fontWeight={700} color="white">
-            Social
-          </Typography>
+          <Typography variant="info-title">Social</Typography>
 
           <Stack direction="row" gap="2rem">
             {socials.map(({ href, Icon }, index) => (

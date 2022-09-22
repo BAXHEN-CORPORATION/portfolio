@@ -1,6 +1,8 @@
 //** External Imports */
 import React from "react";
 
+import { Box } from "@mui/material";
+
 //** Local Imports */
 
 //** Typings */
@@ -15,7 +17,7 @@ const defaultProps: Partial<FooterProps> = {};
  * @container
  */
 const Footer: React.FC<FooterProps> = () => {
-  return <div>Footer</div>;
+  return <Box height="100vh">Footer</Box>;
 };
 
 Footer.defaultProps = defaultProps;

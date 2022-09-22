@@ -6,7 +6,7 @@ import {
   Theme,
   ThemeOptions,
 } from "@mui/material/styles";
-import blue from "@mui/material/colors/blue";
+import green from "@mui/material/colors/green";
 
 const customThemeMerge = (
   theme: ThemeOptions,
@@ -21,8 +21,43 @@ let themeOptions: ThemeOptions = {
   },
   typography: {
     fontFamily: "Poppins",
+    "info-name": {
+      color: "white",
+      fontWeight: 700,
+      fontSize: "1.75rem",
+      fontStyle: "italic",
+    },
+    "info-title": {
+      color: "white",
+      fontWeight: 700,
+      fontSize: "1.25rem",
+    },
+    main: {
+      fontWeight: 700,
+      fontSize: "48px",
+      lineHeight: 1,
+      letterSpacing: "-.04em",
+      wordBreak: "break-word",
+    },
+    content: {
+      lineHeight: "1.6875em",
+      fontSize: "1rem",
+    },
+    topic: {
+      fontWeight: 700,
+      lineHeight: 1,
+      fontSize: "2rem",
+      letterSpacing: "-.04em",
+    },
+    section: {
+      fontWeight: 700,
+      lineHeight: "1.5em",
+      fontSize: "18px",
+      letterSpacing: "-.02em",
+      wordBreak: "break-word",
+    },
   },
-  palette: { primary: { main: blue["100"] }, secondary: { main: "#1f1f1f" } },
+  palette: { primary: { main: green["100"] }, secondary: { main: "#1f1f1f" } },
   breakpoints: {
     values: {
       mobile: 0,

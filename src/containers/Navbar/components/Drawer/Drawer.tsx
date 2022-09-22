@@ -2,7 +2,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { Paper } from "@mui/material";
+import { Paper, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Slide from "@mui/material/Slide";
@@ -30,6 +30,8 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
   open,
   links,
 }) => {
+  const theme = useTheme();
+
   const { pathname } = useLocation();
 
   return (
@@ -39,7 +41,10 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
         height: `calc(3rem + ${links.length * 38}px)`,
         width: "100%",
         position: "absolute",
-        top: (theme) => theme.navbar.height,
+        top: {
+          tabletLarge: theme.navbar.height,
+          mobile: `calc(${theme.navbar.height} - 30px)`,
+        },
         display: { tabletLarge: "none", mobile: "initial" },
       }}
     >
@@ -53,7 +58,7 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
         <Paper
           sx={{
             borderRadius: "0px",
-            backgroundColor: "primary.main",
+            backgroundColor: { tabletLarge: "primary.main", mobile: "white" },
             position: "absolute",
             top: 0,
             padding: "1.5rem 2rem",

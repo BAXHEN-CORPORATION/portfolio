@@ -14,6 +14,7 @@ import DragHandleIcon from "@mui/icons-material/DragHandle";
 import logo from "../../assets/logo.jpg";
 import Drawer from "./components/Drawer";
 import InfoDrawer from "./components/InfoDrawer";
+import { useTheme } from "@mui/material";
 
 //** Typings */
 
@@ -34,6 +35,8 @@ const defaultProps: Partial<NavbarProps> = {};
  * @container
  */
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
+  const theme = useTheme();
+
   const [open, setOpen] = React.useState(false);
 
   const onToggle = () => {
@@ -45,14 +48,21 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
       <AppBar position="static" elevation={0}>
         <Toolbar
           sx={{
-            height: (theme) => theme.navbar.height,
-            padding: { tabletLarge: "0 10rem", mobile: "0 4rem" },
+            height: {
+              tabletLarge: theme.navbar.height,
+              mobile: `calc(${theme.navbar.height} - 30px)`,
+            },
+            padding: { tabletLarge: "0 10rem", mobile: "0 3.15rem" },
             zIndex: (theme) => theme.zIndex.appBar + 1,
+            backgroundColor: { tabletLarge: "primary.main", mobile: "white" },
           }}
         >
           <Avatar
             component={Link}
-            sx={{ height: "70px", width: "70px" }}
+            sx={{
+              height: { tabletLarge: "70px", mobile: "50px" },
+              width: { tabletLarge: "70px", mobile: "50px" },
+            }}
             to="/"
           >
             <img src={logo} alt="logo" style={{ width: "100%" }} />
