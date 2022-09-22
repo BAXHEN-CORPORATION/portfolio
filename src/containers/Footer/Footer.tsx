@@ -1,16 +1,16 @@
 //** External Imports */
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 //** Local Imports */
-import Button from "@mui/material/Button";
 import { navLinks, socials } from "app-data";
 import logo from "assets/logo.jpg";
 import Socials from "components/Socials";
-import { Link } from "react-router-dom";
 
 //** Typings */
 export interface FooterProps {}
