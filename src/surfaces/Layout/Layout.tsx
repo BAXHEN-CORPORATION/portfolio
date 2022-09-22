@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 //** Local Imports */
 import Footer from "../../containers/Footer";
 import Navbar from "../../containers/Navbar";
-import { navLinks } from "./nav-links";
+import { navLinks } from "../../app-data/nav-links";
 
 //** Typings */
 export interface LayoutProps {}

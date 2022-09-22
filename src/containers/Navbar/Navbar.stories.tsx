@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Navbar from ".";
 import Stack from "@mui/material/Stack";
-import { navLinks } from "../../surfaces/Layout/nav-links";
+import { navLinks } from "../../app-data/nav-links";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
