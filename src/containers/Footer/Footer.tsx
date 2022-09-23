@@ -61,9 +61,7 @@ const Footer: React.FC<FooterProps> = () => {
             to={to}
             component={Link}
             sx={{
-              ml: "auto",
               color: "white",
-              minWidth: "4rem",
             }}
           >
             {label}
