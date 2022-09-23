@@ -4,7 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
@@ -36,6 +36,7 @@ const defaultProps: Partial<NavbarProps> = {};
  */
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
   const theme = useTheme();
+  const { pathname } = useLocation();
 
   const [open, setOpen] = React.useState(false);
 
@@ -73,6 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
               <Button
                 key={to}
                 variant="nav-link"
+                className={to === pathname ? "active" : ""}
                 to={to}
                 component={Link}
                 sx={{
