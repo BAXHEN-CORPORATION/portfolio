@@ -202,7 +202,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
         },
       ],
       styleOverrides: {
-        sizeLarge: { height: "45px", width: "45px" },
+        sizeLarge: { height: "40px", width: "40px" },
       },
     },
     MuiPaper: {
