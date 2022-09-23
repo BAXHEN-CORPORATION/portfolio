@@ -52,6 +52,7 @@ const ScrollToTop: React.FC<SrollToTopProps> = () => {
       mountOnEnter
     >
       <IconButton
+        aria-label="scroll to top"
         onClick={goToTop}
         sx={{
           position: "fixed",
