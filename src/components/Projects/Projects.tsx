@@ -1,10 +1,10 @@
 //** External Imports */
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
+import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card";
 
 //** Local Imports */
 import { Project } from "app-data";

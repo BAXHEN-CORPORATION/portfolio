@@ -1,16 +1,16 @@
 //** External Imports */
+import { motion } from "framer-motion";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 
 //** Local Imports */
-import { filters, FilterTag } from "app-data/filters";
 import { allProjects, Project } from "app-data";
+import { filters, FilterTag } from "app-data/filters";
 import BestProjects from "components/Projects";
-import Box from "@mui/material/Box";
 
 //** Typings */
 export interface PortfolioProps {}

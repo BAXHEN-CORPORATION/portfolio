@@ -7,12 +7,12 @@ import Typography from "@mui/material/Typography";
 
 //** Local Imports */
 import { bestProjects, skills, socials, workExperiences } from "app-data";
-import BestProjects from "components/Projects";
 import MySkills from "components/MySkills";
+import BestProjects from "components/Projects";
+import ScrollToTop from "components/ScrollToTop";
 import Socials from "components/Socials";
 import WorkExperiences from "components/WorkExperiences";
 import photo from "../../assets/main-img.png";
-import ScrollToTop from "components/ScrollToTop";
 
 //** Typings */
 export interface HomeProps {}
