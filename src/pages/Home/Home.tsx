@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 
 //** Local Imports */
 import { bestProjects, skills, socials, workExperiences } from "app-data";
-import BestProjects from "components/BestProjects";
+import BestProjects from "components/Projects";
 import MySkills from "components/MySkills";
 import Socials from "components/Socials";
 import WorkExperiences from "components/WorkExperiences";
@@ -96,7 +96,17 @@ const Home: React.FC<HomeProps> = () => {
 
             <Typography variant="topic">Personal favorite projects:</Typography>
 
-            <BestProjects projects={bestProjects} />
+            <Box
+              display="grid"
+              gridTemplateColumns={{
+                tabletLarge: "repeat(auto-fill, minmax(100px, 1fr))",
+                mobile: "repeat(auto-fill, minmax(200px, 1fr))",
+              }}
+              height="min-content"
+              gap="2rem"
+            >
+              <BestProjects projects={bestProjects} />
+            </Box>
           </Stack>
         </Box>
 

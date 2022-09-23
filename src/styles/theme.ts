@@ -30,7 +30,8 @@ let themeOptions: ThemeOptions = {
     "info-title": {
       color: "white",
       fontWeight: 700,
-      fontSize: "1.25rem",
+      fontSize: "1.125rem",
+      letterSpacing: "-.04em",
     },
     main: {
       fontWeight: 700,
@@ -122,6 +123,24 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
             },
           },
         },
+        {
+          props: { variant: "filter" },
+          style: {
+            padding: 0,
+            textTransform: "capitalize",
+            fontSize: "1rem",
+            fontWeight: 400,
+
+            "&:hover, &:focus, &.active": {
+              backgroundColor: "transparent",
+              color: green["900"],
+            },
+            minWidth: "unset",
+            "& .MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
       ],
     },
 
@@ -202,7 +221,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
         },
       ],
       styleOverrides: {
-        sizeLarge: { height: "40px", width: "40px" },
+        sizeLarge: { height: "45px", width: "45px" },
       },
     },
     MuiPaper: {

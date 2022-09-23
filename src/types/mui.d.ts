@@ -4,10 +4,10 @@ declare module "@mui/material" {
   //** Palette */
 
   interface Palette {
-    neutral?: Palette["primary"];
+    // neutral?: Palette["primary"];
   }
   interface PaletteOptions {
-    neutral?: PaletteOptions["primary"];
+    // neutral?: PaletteOptions["primary"];
   }
 
   interface CommonColors {
@@ -87,6 +87,7 @@ declare module "@mui/material" {
 
   interface ButtonPropsVariantOverrides {
     "nav-link": true;
+    filter: true;
   }
 
   //** IconButtons */
