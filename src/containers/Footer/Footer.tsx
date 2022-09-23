@@ -1,6 +1,6 @@
 //** External Imports */
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
@@ -24,6 +24,7 @@ const defaultProps: Partial<FooterProps> = {};
  * @container
  */
 const Footer: React.FC<FooterProps> = () => {
+  const { pathname } = useLocation();
   return (
     <Stack
       direction={{ tabletLarge: "row", mobile: "column" }}
@@ -57,6 +58,7 @@ const Footer: React.FC<FooterProps> = () => {
         {navLinks.map(({ to, label }) => (
           <Button
             key={to}
+            className={to === pathname ? "active" : ""}
             variant="nav-link"
             to={to}
             component={Link}
@@ -103,6 +105,7 @@ const Footer: React.FC<FooterProps> = () => {
           <Button
             key={to}
             variant="nav-link"
+            className={to === pathname ? "active" : ""}
             to={to}
             component={Link}
             sx={{
