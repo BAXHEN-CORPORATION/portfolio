@@ -31,12 +31,12 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           component={motion.div}
           layout
           animate={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0 }}
-          exit={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ type: "spring" }}
           elevation={0}
           sx={{
             borderRadius: 0,
-            // width: { tabletLarge: "33%", tablet: "50%", mobile: "100%" },
           }}
         >
           <CardActionArea
