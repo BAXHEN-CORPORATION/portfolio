@@ -13,17 +13,19 @@ import logo from "assets/logo.jpg";
 import Socials from "components/Socials";
 
 //** Typings */
-export interface FooterProps {}
+export interface FooterProps {
+  name?: string;
+}
 
 //** Default Props */
-const defaultProps: Partial<FooterProps> = {};
+const defaultProps: Partial<FooterProps> = { name: "Carlos Henrique" };
 
 /**
  * Container for rendering footer
  *
  * @container
  */
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC<FooterProps> = ({ name }) => {
   const { pathname } = useLocation();
   return (
     <Stack
@@ -76,11 +78,11 @@ const Footer: React.FC<FooterProps> = () => {
             <img src={logo} alt="logo" style={{ width: "100%" }} />
           </Avatar>
 
-          <Typography variant="info-name">Carlos Henrique</Typography>
+          <Typography variant="info-name">{name}</Typography>
         </Stack>
 
         <Typography variant="content" color="white">
-          Follow me on social networks:
+          Me siga nas redes sociais:
         </Typography>
 
         <Socials socials={socials} htmlColor="white" />

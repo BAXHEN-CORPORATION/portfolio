@@ -78,23 +78,26 @@ const Home: React.FC<HomeProps> = () => {
           </Box>
 
           <Stack gap="2rem" maxWidth={{ tabletLarge: "450px", mobile: "100%" }}>
-            <Typography variant="main">Well, hello there.</Typography>
+            <Typography variant="main">
+              Não existe viva alma mais honesta do que eu nesse país.
+            </Typography>
             <Typography variant="content">
-              Proin gravida nibh vel velit auctor aliquet. Aenean sollicituti
-              din, lorem quis bibendum auctor, nisi elit consequat
+              Encantador de serpentes. Pai dos pobres. Barba. Brahma.
+              Luladrinho. Lulinha. Muitos nomes para o rosto da honestidade. Se
+              eu for eleito presidente vou ver o que eu faço.
             </Typography>
 
-            <Typography variant="topic">Some of my skills:</Typography>
+            <Typography variant="topic">Minhas habilidades:</Typography>
 
             <MySkills skills={skills} />
 
             <Typography variant="topic" mt="2.5rem">
-              Work experience:
+              Experiência:
             </Typography>
 
             <WorkExperiences experiences={workExperiences} />
 
-            <Typography variant="topic">Personal favorite projects:</Typography>
+            <Typography variant="topic">Principais projetos:</Typography>
 
             <Box
               display="grid"
@@ -125,7 +128,7 @@ const Home: React.FC<HomeProps> = () => {
           }}
           maxWidth={{ tabletLarge: "500px", mobile: "100%" }}
         >
-          <Typography variant="topic">Keep in touch:</Typography>
+          <Typography variant="topic">Entre em contato:</Typography>
           <Socials color="secondary" socials={socials} />
         </Stack>
       </Box>

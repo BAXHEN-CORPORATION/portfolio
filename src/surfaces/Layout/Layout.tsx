@@ -6,6 +6,7 @@ import { Outlet } from "react-router";
 import Footer from "../../containers/Footer";
 import Navbar from "../../containers/Navbar";
 import { navLinks } from "../../app-data/nav-links";
+import { user } from "app-data";
 
 //** Typings */
 export interface LayoutProps {}
@@ -23,7 +24,7 @@ const Layout: React.FC<LayoutProps> = () => {
     <>
       <Navbar links={navLinks} />
       <Outlet />
-      <Footer />
+      <Footer name={user.name} />
     </>
   );
 };

@@ -7,24 +7,24 @@ export interface Experience {
 
 export const workExperiences: Experience[] = [
   {
-    title: "Design Now Studio",
-    begin: "2021",
+    title: "Palestrante",
+    begin: "2019",
     end: new Date().getFullYear(),
     description:
-      "Graphic/Web Designer -Proin gravida nibh vel velit auctor ali uet. Aen ean sol licitu din, lorem quis bi ben dum auctor, nisi elit con se quat ipsum, nec sa gitis sem nibhelit edui.",
+      "Lutando contra o facismo usando a democracia. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
   },
   {
-    title: "Creative Studio",
+    title: "Presidiário",
     begin: "2018",
-    end: "2021",
+    end: "2019",
     description:
-      "Art Director/Web Designer -Proin gravida nibh vel velit auctor ali uet. Aen ean sol licitu din, lorem quis bi ben dum auctor, nisi elit con se quat ipsum, nec sa gitis sem nibhelit edui.",
+      "Aprendi o que o pobre passa na cadeia, sem churrasco e sem cerveja não dá. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
   },
   {
-    title: "Visual Art Studio",
-    begin: "2015",
-    end: "2018",
+    title: "Presidente do Brasil",
+    begin: "2002",
+    end: "2012",
     description:
-      "Visual Art Studio -Proin gravida nibh vel velit auctor ali uet. Aen ean sol licitu din, lorem quis bi ben dum auctor, nisi elit con se quat ipsum, nec sa gitis sem nibhelit edui.",
+      "Ajudei os pobres. E tirei 25 millhões de crianças da rua. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
   },
 ];

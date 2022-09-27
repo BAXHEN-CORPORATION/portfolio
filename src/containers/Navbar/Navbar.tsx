@@ -15,6 +15,7 @@ import logo from "../../assets/logo.jpg";
 import Drawer from "./components/Drawer";
 import InfoDrawer from "./components/InfoDrawer";
 import { useTheme } from "@mui/material";
+import { user } from "app-data";
 
 //** Typings */
 
@@ -92,11 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
           </Stack>
         </Toolbar>
       </AppBar>
-      <InfoDrawer
-        open={open}
-        onToggle={onToggle}
-        email="carlos@carloshenrique.com"
-      />
+      <InfoDrawer open={open} onToggle={onToggle} {...user} />
       <Drawer links={links} open={open} />
     </>
   );

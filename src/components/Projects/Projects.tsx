@@ -25,7 +25,7 @@ const defaultProps: Partial<ProjectsProps> = {};
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <AnimatePresence>
-      {projects.map(({ name, img }, index) => (
+      {projects.map(({ name, mainImg }, index) => (
         <Card
           key={index}
           component={motion.div}
@@ -55,7 +55,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               },
             }}
           >
-            <CardMedia component="img" image={img} alt={name} />
+            <CardMedia component="img" image={mainImg} alt={name} />
           </CardActionArea>
         </Card>
       ))}

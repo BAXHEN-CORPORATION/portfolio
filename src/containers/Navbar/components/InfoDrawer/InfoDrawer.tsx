@@ -15,18 +15,26 @@ import CloseIcon from "@mui/icons-material/Close";
 import logo from "assets/logo.jpg";
 import { socials } from "app-data/socials";
 import Socials from "components/Socials";
+import { user } from "app-data";
 
 //** Typings */
 export interface InfoDrawerProps {
   open: boolean;
   email?: string;
+  name?: string;
+  description?: string;
+  phone?: string;
   onToggle?: () => void;
 }
 
 //** Default Props */
 const defaultProps: Partial<InfoDrawerProps> = {
   onToggle: () => {},
-  email: "carlos@carloshenrique.com",
+  email: "carlos@carlos.com",
+  name: "Carlos Henrique",
+  description:
+    "Fullstack developer using NodeJs in the backend with AngularJs and ReactJs in the front-end.",
+  phone: "+55 (11) 94872-5475",
 };
 
 /**
@@ -38,6 +46,9 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
   open,
   onToggle,
   email,
+  phone,
+  description,
+  name,
 }) => {
   return (
     <Drawer
@@ -67,15 +78,14 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
               <img src={logo} alt="logo" style={{ width: "100%" }} />
             </Avatar>
 
-            <Typography variant="info-name">Carlos Henrique</Typography>
+            <Typography variant="info-name">{name}</Typography>
           </Stack>
           <Typography variant="body1" fontWeight={500} color="white">
-            Fullstack developer using NodeJs in the backend with AngularJs and
-            ReactJs in the front-end.
+            {description}
           </Typography>
           <Typography variant="info-title">Where to find me</Typography>
           <Typography variant="body1" fontWeight={500} color="white">
-            Phone: +55 (11) 94872-5475
+            Phone: {phone}
           </Typography>
           <Typography
             component="a"
