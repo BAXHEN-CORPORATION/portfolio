@@ -1,4 +1,4 @@
-# Material UI v5 Emotion Engine
+# Portifólio Pessoal
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
@@ -10,34 +10,38 @@
 
 <img src="https://camo.githubusercontent.com/306dedb9426f1d93a981d305a0a18164932ece8dca4d5fd820b1d3c36625b218/68747470733a2f2f6d75692e636f6d2f7374617469632f6c6f676f2e737667" alt="exemplo imagem">
 
-> Initial template for using the Material UI lib version 5 (Emotion Engine) with React v18.
+> Template para aplicação de portifólio pessoal.
 
-## 💻 Prerequisites
+## 💻 Pré-requisitos
 
-Before starting, make sure you've met the following requirements:
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- You have installed the latest version of `NodeJs/NPM`
-- You have a `Windows/Linux/Mac` machine.
+- Você instalou a versão mais recente do `NodeJs/NPM`
+- Você tem uma máquina `Windows/Linux/Mac`.
 
-## 🚀 Installing Material UI v5 Emotion Engine
+## 🚀 Para iniciar o template
 
-To install the Material UI v5 Emotion Engine, follow these steps:
+Para iniciar o Portfólio, siga estas etapas:
+
+- Descompacte a pasta com os arquivos.
+
+- Entre na pasta usando o cmd.
+
+- Rode o comando 'npm install' para instalar as dependências.
+
+- Inicie o projeto com o comando 'npm run start'.
 
 ```
-git clone https://github.com/BAXHEN-CORPORATION/material-ui-v5-react-template
-.git
-
-cd ./material-ui-v5-react-template
+cd ./portfolio
 
 npm install
 
 npm run start
-
 ```
 
 ## 🤝 Contributors
 
-We thank the following people who contributed to this project:
+Agradecemos as seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
@@ -54,7 +58,7 @@ We thank the following people who contributed to this project:
 
 ## 📝 License
 
-This project is under license. See the [LICENSE](LICENSE.md) file for more details.
+Este projeto está sob licença. Veja a [Licença](LICENSE.md) para mais detalhes.
 
 © 2022 GitHub, Inc.
 Terms
