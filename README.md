@@ -10,7 +10,7 @@
 
 > [Portifólio Visualização ao Vivo](https://tiny-macaron-3edcdf.netlify.app)
 
-> Template para aplicação de portifólio pessoal.
+> Template de portifólio pessoal.
 
 ## 💻 Versão computador
 
