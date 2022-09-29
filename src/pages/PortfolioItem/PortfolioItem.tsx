@@ -1,20 +1,14 @@
 //** External Imports */
-import { motion } from "framer-motion";
 import React from "react";
 
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 //** Local Imports */
-import { allProjects, Project } from "app-data";
-import { filters, FilterTag } from "app-data/filters";
-import BestProjects from "components/Projects";
-import { Link, useLoaderData } from "react-router-dom";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import MuiLink from "@mui/material/Link";
-import { withScrollToTop } from "hoc";
+import { Link, useLoaderData } from "react-router-dom";
 import LinkedinShareButton from "react-share/lib/LinkedinShareButton";
 
 //** Typings */
@@ -158,7 +152,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
           <LinkedinShareButton
             title={project.details}
             summary={project.description}
-            url={`https://www.baxhen-corporation.github.io/portfolio`}
+            url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
           >
             <div className="icon-socmed-white linkedin">In</div>
           </LinkedinShareButton>
