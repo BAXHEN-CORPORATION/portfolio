@@ -12,10 +12,9 @@ import CloseIcon from "@mui/icons-material/Close";
 
 //** Local Imports */
 
-import logo from "assets/logo.jpg";
 import { socials } from "app-data/socials";
+import logo from "assets/logo.jpg";
 import Socials from "components/Socials";
-import { user } from "app-data";
 
 //** Typings */
 export interface InfoDrawerProps {
