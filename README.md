@@ -8,11 +8,12 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/BAXHEN-CORPORATION/material-ui-v5-react-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/BAXHEN-CORPORATION/material-ui-v5-react-template?style=for-the-badge)
 
-<img src="https://camo.githubusercontent.com/306dedb9426f1d93a981d305a0a18164932ece8dca4d5fd820b1d3c36625b218/68747470733a2f2f6d75692e636f6d2f7374617469632f6c6f676f2e737667" alt="exemplo imagem">
-
 > [Portifólio Visualização ao Vivo](https://tiny-macaron-3edcdf.netlify.app)
 
 > Template para aplicação de portifólio pessoal.
+
+![Computador](https://photos.app.goo.gl/K3G89xJuwDLVk5dCA)
+![Dispositivos móveis](https://photos.app.goo.gl/13s1K4Sbxfbtn97Q6)
 
 ## 💻 Pré-requisitos
 
