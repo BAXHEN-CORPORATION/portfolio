@@ -46,7 +46,7 @@ export const bestProjects: Project[] = [
       "Duis sed odio sit amet nibh vulputate cursus an amet mauris. Morbi accumsan ipsum velit. Nam c tellus a odio tincidunt auctor a ornare odiomi. non mauris vit ae erat consequat auctor eu ine amet mau auctor a ornare odio.",
     tags: [tagsConfig["material-ui"], tagsConfig["reactjs"]],
     date: "September 28, 2022",
-    imgs: [app_01, app_01, app_01, app_01, app_01, app_01, app_01, app_01],
+    imgs: [app_01, app_01, app_01, app_01],
     mainImg: app_01,
   },
 ];
