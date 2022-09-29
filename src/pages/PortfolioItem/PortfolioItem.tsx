@@ -4,14 +4,18 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
-//** Local Imports */
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import MuiLink from "@mui/material/Link";
+
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+
 import { Link, useLoaderData } from "react-router-dom";
 import LinkedinShareButton from "react-share/lib/LinkedinShareButton";
+import FacebookShareButton from "react-share/lib/FacebookShareButton";
+import TwitterShareButton from "react-share/lib/TwitterShareButton";
+//** Local Imports */
 
 //** Typings */
 export interface PortfolioItemProps {}
@@ -149,12 +153,28 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
             </Typography>
           ))}
         </Stack>
-        <Stack direction="row" gap="0.5rem">
+        <Stack direction="row" gap="0.5rem" alignItems="center">
           <Typography variant="section">Share:</Typography>
+          <FacebookShareButton
+            title={project.details}
+            quote={project.description}
+            url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
+            style={{ display: "flex" }}
+          >
+            <FacebookIcon />
+          </FacebookShareButton>
+          <TwitterShareButton
+            title={project.details}
+            url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
+            style={{ display: "flex" }}
+          >
+            <TwitterIcon />
+          </TwitterShareButton>
           <LinkedinShareButton
             title={project.details}
             summary={project.description}
             url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
+            style={{ display: "flex" }}
           >
             <LinkedInIcon />
           </LinkedinShareButton>
