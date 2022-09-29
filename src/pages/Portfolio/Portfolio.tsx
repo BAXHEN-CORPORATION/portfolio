@@ -1,7 +1,7 @@
 //** External Imports */
 import { motion } from "framer-motion";
 import React from "react";
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 //** Local Imports */
-import { Project, filters, FilterTag, allProjects } from "app-data";
+import { allProjects, filters, FilterTag, Project } from "app-data";
 
 import BestProjects from "components/Projects";
 

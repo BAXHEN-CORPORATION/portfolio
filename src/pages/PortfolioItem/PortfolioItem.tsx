@@ -1,6 +1,6 @@
 //** External Imports */
 import React from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Box from "@mui/material/Box";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -17,8 +17,8 @@ import LinkedinShareButton from "react-share/lib/LinkedinShareButton";
 import TwitterShareButton from "react-share/lib/TwitterShareButton";
 
 //** Local Imports */
-import { withScrollToTop } from "hoc";
 import { allProjects } from "app-data";
+import { withScrollToTop } from "hoc";
 import Error from "pages/Error";
 
 //** Typings */

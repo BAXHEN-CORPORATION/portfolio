@@ -1,4 +1,3 @@
-import { allProjects } from "app-data";
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../surfaces/Layout";
 
@@ -22,14 +21,6 @@ const router = createBrowserRouter([
       {
         path: "portfolio/:name",
         element: <PortfolioProject />,
-        // loader: ({ params }) => {
-        //   const name = params.name;
-
-        //   if (!name) return {};
-
-        //   const project = allProjects.find((project) => project.id === name);
-        //   return { project };
-        // },
       },
     ],
   },
