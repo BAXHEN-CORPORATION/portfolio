@@ -1,6 +1,6 @@
 //** External Imports */
 import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 import Box from "@mui/material/Box";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -18,6 +18,8 @@ import TwitterShareButton from "react-share/lib/TwitterShareButton";
 
 //** Local Imports */
 import { withScrollToTop } from "hoc";
+import { allProjects } from "app-data";
+import Error from "pages/Error";
 
 //** Typings */
 export interface PortfolioItemProps {}
@@ -31,7 +33,13 @@ const defaultProps: Partial<PortfolioItemProps> = {};
  * @page
  */
 const PortfolioItem: React.FC<PortfolioItemProps> = () => {
-  const { project } = useLoaderData() as any;
+  const params = useParams<"name">();
+
+  const project = allProjects.find((project) => project.id === params.name);
+
+  if (!project) {
+    return <Error />;
+  }
 
   return (
     <Stack

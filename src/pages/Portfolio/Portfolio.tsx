@@ -1,6 +1,7 @@
 //** External Imports */
 import { motion } from "framer-motion";
 import React from "react";
+import { useLoaderData, useLocation } from "react-router-dom";
 
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -8,10 +9,10 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 //** Local Imports */
-import { Project } from "app-data";
-import { filters, FilterTag } from "app-data/filters";
+import { Project, filters, FilterTag, allProjects } from "app-data";
+
 import BestProjects from "components/Projects";
-import { useLoaderData, useLocation } from "react-router-dom";
+
 import { withScrollToTop } from "hoc";
 
 //** Typings */
@@ -27,8 +28,6 @@ const defaultProps: Partial<PortfolioProps> = {};
  */
 const Portfolio: React.FC<PortfolioProps> = () => {
   const location = useLocation();
-
-  const { allProjects } = useLoaderData() as any;
 
   const [tag, setTag] = React.useState<FilterTag>(
     location?.state?.tag || "all"

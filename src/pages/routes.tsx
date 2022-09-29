@@ -18,21 +18,18 @@ const router = createBrowserRouter([
       {
         path: "portfolio",
         element: <Portfolio />,
-        loader: () => {
-          return { allProjects };
-        },
       },
       {
         path: "portfolio/:name",
         element: <PortfolioProject />,
-        loader: ({ params }) => {
-          const name = params.name;
+        // loader: ({ params }) => {
+        //   const name = params.name;
 
-          if (!name) return {};
+        //   if (!name) return {};
 
-          const project = allProjects.find((project) => project.id === name);
-          return { project };
-        },
+        //   const project = allProjects.find((project) => project.id === name);
+        //   return { project };
+        // },
       },
     ],
   },
