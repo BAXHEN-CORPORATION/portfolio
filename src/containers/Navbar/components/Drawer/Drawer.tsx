@@ -15,6 +15,7 @@ import { NavLinks } from "../../Navbar";
 //** Typings */
 export interface DrawerProps {
   open: boolean;
+  onToggle?: () => void;
   links: NavLinks[];
 }
 
@@ -29,6 +30,7 @@ const defaultProps: Partial<DrawerProps> = {};
 const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
   open,
   links,
+  onToggle,
 }) => {
   const theme = useTheme();
 
@@ -38,7 +40,7 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
     <Box
       sx={{
         overflow: "hidden",
-        height: `calc(3rem + ${links.length * 38}px)`,
+        height: open ? `calc(3rem + ${links.length * 38}px)` : "0px",
         width: "100%",
         position: "absolute",
         top: {
@@ -46,6 +48,7 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
           mobile: `calc(${theme.navbar.height} - 30px)`,
         },
         display: { tabletLarge: "none", mobile: "initial" },
+        zIndex: (theme) => theme.zIndex.drawer,
       }}
     >
       <Slide
@@ -79,6 +82,7 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
                 sx={{
                   mr: "auto",
                 }}
+                onClick={onToggle}
               >
                 {label}
               </Button>

@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
         mb="2.75rem"
         sx={{
           [`& > *:not(:nth-child(-n+${Math.round(navLinks.length / 2)}))`]: {
-            display: { tabletLarge: "none", mobile: "initial" },
+            display: { tabletLarge: "none", mobile: "flex" },
           },
         }}
         justifyContent="flex-start"
@@ -97,7 +97,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
         mb={{ tabletLarge: "2.75rem", mobile: "initial" }}
         sx={{
           [`& > *:nth-child(-n+${Math.round(navLinks.length / 2)})`]: {
-            display: { tabletLarge: "none", mobile: "initial" },
+            display: { tabletLarge: "none", mobile: "flex" },
           },
           maxWidth: "250px",
           justifyContent: "center",

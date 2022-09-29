@@ -7,6 +7,7 @@ import Footer from "../../containers/Footer";
 import Navbar from "../../containers/Navbar";
 import { navLinks } from "../../app-data/nav-links";
 import { user } from "app-data";
+import { withScrollToTop } from "hoc";
 
 //** Typings */
 export interface LayoutProps {}

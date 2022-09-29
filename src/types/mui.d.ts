@@ -11,7 +11,7 @@ declare module "@mui/material" {
   }
 
   interface CommonColors {
-    // darkGray: string;
+    lynxWhite: string;
   }
 
   //** Theme */

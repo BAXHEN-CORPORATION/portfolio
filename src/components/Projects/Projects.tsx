@@ -8,6 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 
 //** Local Imports */
 import { Project } from "app-data";
+import { Link } from "react-router-dom";
 
 //** Typings */
 export interface ProjectsProps {
@@ -25,7 +26,7 @@ const defaultProps: Partial<ProjectsProps> = {};
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <AnimatePresence>
-      {projects.map(({ name, mainImg }, index) => (
+      {projects.map(({ name, mainImg, id }, index) => (
         <Card
           key={index}
           component={motion.div}
@@ -40,6 +41,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           }}
         >
           <CardActionArea
+            component={Link}
             sx={{
               position: "relative",
               "&::after": {
@@ -54,6 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 }, ${index % 3 === 0 ? 255 - index : 0}, 0.1)`,
               },
             }}
+            to={`/portfolio/${id}`}
           >
             <CardMedia component="img" image={mainImg} alt={name} />
           </CardActionArea>

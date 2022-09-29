@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   return (
     <>
-      <AppBar position="static" elevation={0}>
+      <AppBar position="static" elevation={0} sx={{ bgcolor: "transparent" }}>
         <Toolbar
           sx={{
             height: {
@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
         </Toolbar>
       </AppBar>
       <InfoDrawer open={open} onToggle={onToggle} {...user} />
-      <Drawer links={links} open={open} />
+      <Drawer links={links} open={open} onToggle={onToggle} />
     </>
   );
 };

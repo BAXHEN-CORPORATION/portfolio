@@ -55,7 +55,9 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
       anchor="right"
       hideBackdrop
       open={open}
-      sx={{ display: { tabletLarge: "initial", mobile: "none" } }}
+      sx={{
+        display: { tabletLarge: "initial", mobile: "none" },
+      }}
     >
       <Box
         width="490px"

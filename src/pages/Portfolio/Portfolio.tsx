@@ -8,9 +8,11 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 //** Local Imports */
-import { allProjects, Project } from "app-data";
+import { Project } from "app-data";
 import { filters, FilterTag } from "app-data/filters";
 import BestProjects from "components/Projects";
+import { useLoaderData, useLocation } from "react-router-dom";
+import { withScrollToTop } from "hoc";
 
 //** Typings */
 export interface PortfolioProps {}
@@ -24,12 +26,20 @@ const defaultProps: Partial<PortfolioProps> = {};
  * @page
  */
 const Portfolio: React.FC<PortfolioProps> = () => {
-  const [tag, setTag] = React.useState<FilterTag>("all");
+  const location = useLocation();
+
+  const { allProjects } = useLoaderData() as any;
+
+  const [tag, setTag] = React.useState<FilterTag>(
+    location?.state?.tag || "all"
+  );
 
   const filterByTag = ({ tags }: Project) => {
     if (tag === "all") return true;
 
-    if (tags.includes(tag)) {
+    const currTag = tags.find((projectTag) => projectTag.tag === tag);
+
+    if (currTag) {
       return true;
     }
 
@@ -69,7 +79,8 @@ const Portfolio: React.FC<PortfolioProps> = () => {
         component={motion.div}
         layout
         display="grid"
-        gridTemplateColumns="repeat(auto-fit, minmax(150px, 1fr))"
+        gridTemplateColumns="repeat(auto-fit, 150px)"
+        gridTemplateRows="repeat(auto-fit, 180px)"
         height="min-content"
         gap="2rem"
       >
@@ -81,4 +92,4 @@ const Portfolio: React.FC<PortfolioProps> = () => {
 
 Portfolio.defaultProps = defaultProps;
 
-export default Portfolio;
+export default withScrollToTop(Portfolio);
