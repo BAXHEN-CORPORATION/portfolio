@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 //** Local Imports */
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import MuiLink from "@mui/material/Link";
@@ -154,7 +156,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
             summary={project.description}
             url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
           >
-            <div className="icon-socmed-white linkedin">In</div>
+            <LinkedInIcon />
           </LinkedinShareButton>
         </Stack>
       </Stack>
