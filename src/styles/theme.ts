@@ -59,7 +59,7 @@ let themeOptions: ThemeOptions = {
     },
   },
   palette: {
-    primary: { main: red["300"] },
+    primary: { main: red["100"] },
     secondary: { main: "#1f1f1f" },
     common: { lynxWhite: "#f7f7f7" },
   },

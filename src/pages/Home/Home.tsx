@@ -2,17 +2,26 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
+
 //** Local Imports */
-import { bestProjects, skills, socials, workExperiences } from "app-data";
+import {
+  bestProjects,
+  skills,
+  socials,
+  workExperiences,
+  downloadResume,
+} from "app-data";
 import MySkills from "components/MySkills";
 import BestProjects from "components/Projects";
 import Socials from "components/Socials";
 import WorkExperiences from "components/WorkExperiences";
-import photo from "../../assets/main-img.png";
 import { withScrollToTop } from "hoc";
+import photo from "../../assets/main-img.png";
 
 //** Typings */
 export interface HomeProps {}
@@ -78,12 +87,12 @@ const Home: React.FC<HomeProps> = () => {
 
         <Stack gap="2rem" maxWidth={{ tabletLarge: "450px", mobile: "100%" }}>
           <Typography variant="main">
-            Não existe viva alma mais honesta do que eu nesse país.
+            Atingir o meu potencial no design e na vida, essa é a minha paixão.
           </Typography>
           <Typography variant="content">
-            Encantador de serpentes. Pai dos pobres. Barba. Brahma. Luladrinho.
-            Lulinha. Muitos nomes para o rosto da honestidade. Se eu for eleito
-            presidente vou ver o que eu faço.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            fuga facere itaque mollitia blanditiis ducimus accusamus nemo fugit
+            nobis iusto.
           </Typography>
 
           <Typography variant="topic">Minhas habilidades:</Typography>
@@ -118,6 +127,34 @@ const Home: React.FC<HomeProps> = () => {
         maxWidth={{ tabletLarge: "500px", mobile: "none" }}
       />
 
+      <Stack
+        gap="2rem"
+        mb="2.75rem"
+        padding={{
+          tabletLarge: "0",
+          mobile: "0 2.75rem",
+        }}
+        maxWidth={{ tabletLarge: "500px", mobile: "100%" }}
+      >
+        <Typography variant="topic">
+          Quer saber mais? <br />
+          Olhe o meu currículo:
+        </Typography>
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="large"
+          onClick={downloadResume}
+          endIcon={<FileDownloadIcon />}
+        >
+          Baixar Currículo
+        </Button>
+      </Stack>
+      <Box
+        display={{ tabletLarge: "initial", mobile: "none" }}
+        width="100%"
+        maxWidth={{ tabletLarge: "500px", mobile: "none" }}
+      />
       <Stack
         gap="2rem"
         mb="2.75rem"

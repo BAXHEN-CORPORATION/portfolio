@@ -11,7 +11,7 @@ import DragHandleIcon from "@mui/icons-material/DragHandle";
 
 //** Local Imports */
 
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.png";
 import Drawer from "./components/Drawer";
 import InfoDrawer from "./components/InfoDrawer";
 import { useTheme } from "@mui/material";

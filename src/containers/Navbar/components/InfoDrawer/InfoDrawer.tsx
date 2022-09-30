@@ -13,7 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 //** Local Imports */
 
 import { socials } from "app-data/socials";
-import logo from "assets/logo.jpg";
+import logo from "assets/logo.png";
 import Socials from "components/Socials";
 
 //** Typings */

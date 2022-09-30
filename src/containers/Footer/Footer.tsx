@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 
 //** Local Imports */
 import { navLinks, socials } from "app-data";
-import logo from "assets/logo.jpg";
+import logo from "assets/logo.png";
 import Socials from "components/Socials";
 
 //** Typings */

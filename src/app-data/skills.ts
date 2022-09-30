@@ -5,8 +5,8 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-  { name: "Honestidade", value: 99, proficiency: "Especialista" },
-  { name: "Inocência", value: 85, proficiency: "Nível ONU" },
-  { name: "Fofura", value: 78, proficiency: "Nata" },
-  { name: "Trabalhar", value: 80, proficiency: "Sempre" },
+  { name: "Design", value: 80, proficiency: "Experiente" },
+  { name: "Photoshop", value: 65, proficiency: "Intermediário" },
+  { name: "Excel", value: 30, proficiency: "Iniciante" },
+  { name: "Fotografia", value: 50, proficiency: "Intermediário" },
 ];

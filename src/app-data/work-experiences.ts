@@ -7,24 +7,24 @@ export interface Experience {
 
 export const workExperiences: Experience[] = [
   {
-    title: "Palestrante",
+    title: "Designer Web",
     begin: "2019",
     end: new Date().getFullYear(),
     description:
-      "Lutando contra o facismo usando a democracia. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
+      "Designer Web. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
   },
   {
-    title: "Presidiário",
+    title: "Estagiária de publicidade",
     begin: "2018",
     end: "2019",
     description:
-      "Aprendi o que o pobre passa na cadeia, sem churrasco e sem cerveja não dá. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
+      "Estagiária de publicidade. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
   },
   {
-    title: "Presidente do Brasil",
-    begin: "2002",
-    end: "2012",
+    title: "Graduação em Artes Gráficas",
+    begin: "2015",
+    end: "2018",
     description:
-      "Ajudei os pobres. E tirei 25 millhões de crianças da rua. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
+      "Graduação em Artes Gráficas. Proin gravida nibh vel velit auctor ali uet. Proin gravida nibh vel velit auctor ali uet.",
   },
 ];
