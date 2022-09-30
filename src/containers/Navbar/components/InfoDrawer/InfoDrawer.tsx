@@ -86,7 +86,7 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
           </Typography>
           <Typography variant="info-title">Where to find me</Typography>
           <Typography variant="body1" fontWeight={500} color="white">
-            Phone: {phone}
+            {phone}
           </Typography>
           <Typography
             component="a"
