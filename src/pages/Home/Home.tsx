@@ -119,6 +119,22 @@ const Home: React.FC<HomeProps> = () => {
             <BestProjects projects={bestProjects} />
           </Box>
         </Stack>
+
+        <Stack gap="2rem" maxWidth={{ tabletLarge: "500px", mobile: "100%" }}>
+          <Typography variant="topic">
+            Quer saber mais? <br />
+            Olhe o meu currículo:
+          </Typography>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="large"
+            onClick={downloadResume}
+            endIcon={<FileDownloadIcon />}
+          >
+            Baixar Currículo
+          </Button>
+        </Stack>
       </Box>
 
       <Box
@@ -127,34 +143,6 @@ const Home: React.FC<HomeProps> = () => {
         maxWidth={{ tabletLarge: "500px", mobile: "none" }}
       />
 
-      <Stack
-        gap="2rem"
-        mb="2.75rem"
-        padding={{
-          tabletLarge: "0",
-          mobile: "0 2.75rem",
-        }}
-        maxWidth={{ tabletLarge: "500px", mobile: "100%" }}
-      >
-        <Typography variant="topic">
-          Quer saber mais? <br />
-          Olhe o meu currículo:
-        </Typography>
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="large"
-          onClick={downloadResume}
-          endIcon={<FileDownloadIcon />}
-        >
-          Baixar Currículo
-        </Button>
-      </Stack>
-      <Box
-        display={{ tabletLarge: "initial", mobile: "none" }}
-        width="100%"
-        maxWidth={{ tabletLarge: "500px", mobile: "none" }}
-      />
       <Stack
         gap="2rem"
         mb="2.75rem"
