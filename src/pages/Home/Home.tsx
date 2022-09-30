@@ -118,22 +118,21 @@ const Home: React.FC<HomeProps> = () => {
           >
             <BestProjects projects={bestProjects} />
           </Box>
-        </Stack>
-
-        <Stack gap="2rem" maxWidth={{ tabletLarge: "500px", mobile: "100%" }}>
-          <Typography variant="topic">
-            Quer saber mais? <br />
-            Olhe o meu currículo:
-          </Typography>
-          <Button
-            variant="outlined"
-            color="secondary"
-            size="large"
-            onClick={downloadResume}
-            endIcon={<FileDownloadIcon />}
-          >
-            Baixar Currículo
-          </Button>
+          <Stack gap="2rem" maxWidth={{ tabletLarge: "500px", mobile: "100%" }}>
+            <Typography variant="topic">
+              Quer saber mais? <br />
+              Olhe o meu currículo:
+            </Typography>
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="large"
+              onClick={downloadResume}
+              endIcon={<FileDownloadIcon />}
+            >
+              Baixar Currículo
+            </Button>
+          </Stack>
         </Stack>
       </Box>
 
