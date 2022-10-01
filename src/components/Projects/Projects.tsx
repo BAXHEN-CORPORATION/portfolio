@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 
 //** Local Imports */
 import { Project } from "app-data";
-import { Link } from "react-router-dom";
+import Link from "@mui/material/Link";
 
 //** Typings */
 export interface ProjectsProps {
@@ -56,7 +56,8 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 }, ${index % 3 === 0 ? 255 - index : 0}, 0.1)`,
               },
             }}
-            to={`/portfolio/${id}`}
+            target="__blank"
+            href={`https://${id}`}
           >
             <CardMedia component="img" image={mainImg} alt={name} />
           </CardActionArea>

@@ -2,10 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "repository": {
-    "live-preview": "https://tiny-macaron-3edcdf.netlify.app",
-    "github": "https://www.github.com/BAXHEN-CORPORATION/portfolio"
-  },
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",

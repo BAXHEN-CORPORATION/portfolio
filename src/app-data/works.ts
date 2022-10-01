@@ -39,7 +39,7 @@ const tagsConfig: TagConfig = {
 
 export const bestProjects: Project[] = [
   {
-    id: normalizeName("Portfolio"),
+    id: "www.baxhen.com/portfolio",
     name: "Portfolio",
     details: "Portfolio Material UI",
     description:
@@ -50,7 +50,7 @@ export const bestProjects: Project[] = [
     mainImg: app_01,
   },
   {
-    id: normalizeName("Portfolio 2"),
+    id: "www.baxhen.com/portfolio",
     name: "Portfolio 2",
     details: "Portfolio Material UI",
     description:
@@ -61,7 +61,7 @@ export const bestProjects: Project[] = [
     mainImg: app_01,
   },
   {
-    id: normalizeName("Portfolio 3"),
+    id: "www.baxhen.com/portfolio",
     name: "Portfolio 3",
     details: "Portfolio Material UI",
     description:
@@ -72,7 +72,3 @@ export const bestProjects: Project[] = [
     mainImg: app_01,
   },
 ];
-
-export const otherProjects: Project[] = [];
-
-export const allProjects: Project[] = [...bestProjects, ...otherProjects];
