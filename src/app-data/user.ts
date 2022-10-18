@@ -1,8 +1,8 @@
 export const user = {
-  name: "Maria da Silva",
-  phone: "+55 (99) 99999-9999",
-  email: "marias@maria.com",
+  name: "Leonardo Rebouças",
+  phone: "+55 (11) 97588-8479",
+  email: "reboucas.beraby@gmail.com",
   resumeFilename: "resume.pdf",
   description:
-    "Sempre fui apaixona em mostrar e expressar o que tem de mais bonito em obras de artes e designs. Então me descobri sendo uma designer web de coração desde pequena. Desde então venho me aperfeiçoando em como mostrar o que tem de melhor nos produtos, marcas e empresas.",
+    "Eu sou um programador frontend ótimo com foco na biblioteca em ReactJs, sempre trabalho em melhorar a qualidade, a reusabilidade e a confiabilidade do meu código. Sou fácil de se lidar e colaborativo.",
 };

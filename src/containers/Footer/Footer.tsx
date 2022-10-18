@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
           </Button>
         ))}
       </Stack>
-      <Stack gap="2rem">
+      <Stack gap="2rem" justifyContent="center">
         <Stack direction="column" alignItems="center" gap="1rem" mb="0.5rem">
           <Avatar sx={{ height: "70px", width: "70px" }}>
             <img src={logo} alt="logo" style={{ width: "100%" }} />
@@ -81,11 +81,11 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
           <Typography variant="info-name">{name}</Typography>
         </Stack>
 
-        <Typography variant="content" color="white">
+        <Typography variant="content" color="white" alignSelf="center">
           Me siga nas redes sociais:
         </Typography>
 
-        <Socials socials={socials} htmlColor="white" />
+        <Socials socials={socials} htmlColor="white" justifyCenter />
       </Stack>
 
       <Stack

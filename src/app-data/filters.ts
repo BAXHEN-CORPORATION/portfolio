@@ -10,7 +10,8 @@ export interface Filter {
 export const filters: Filter[] = [
   { label: "Show All", tag: "all" },
   { label: "ReactJs", tag: "reactjs" },
-  { label: "AngularJs", tag: "angularjs" },
-  { label: "NodeJs", tag: "nodejs" },
   { label: "Material UI", tag: "material-ui" },
+  { label: "Typescript", tag: "typescript" },
+  { label: "Storybook", tag: "storybook" },
+  { label: "Testes Unitários", tag: "tests" },
 ];

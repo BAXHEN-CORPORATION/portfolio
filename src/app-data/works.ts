@@ -1,11 +1,15 @@
-import app_01 from "assets/app_01.png";
 import { normalizeName } from "./utils";
+
+import product_preview_desktop from "assets/projects/product_preview/product_preview_desktop.png";
+import product_preview_mobile from "assets/projects/product_preview/product_preview_mobile.png";
 
 export const tagsNameConfig = {
   "material-ui": "material-ui",
   reactjs: "reactjs",
-  nodejs: "nodejs",
-  angularjs: "angularjs",
+  javascript: "javascript",
+  typescript: "typescript",
+  tests: "tests",
+  storybook: "storybook",
 };
 
 export type Tags = keyof typeof tagsNameConfig;
@@ -31,45 +35,31 @@ type TagConfig = {
 };
 
 const tagsConfig: TagConfig = {
-  angularjs: { tag: "angularjs", pretty: "Angular Js" },
+  javascript: { tag: "javascript", pretty: "Javascript" },
   "material-ui": { tag: "material-ui", pretty: "Material UI" },
-  nodejs: { tag: "nodejs", pretty: "Node Js" },
+  typescript: { tag: "typescript", pretty: "Typescript" },
   reactjs: { tag: "reactjs", pretty: "React Js" },
+  tests: { tag: "tests", pretty: "Testes Unitários" },
+  storybook: { tag: "storybook", pretty: "Storybook" },
 };
 
 export const bestProjects: Project[] = [
   {
-    id: normalizeName("Portfolio"),
-    name: "Portfolio",
+    id: normalizeName("Product Preview"),
+    name: "Product Preview",
     details: "Portfolio Material UI",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus an amet mauris. Morbi accumsan ipsum velit. Nam c tellus a odio tincidunt auctor a ornare odiomi. non mauris vit ae erat consequat auctor eu ine amet mau auctor a ornare odio.",
-    tags: [tagsConfig["material-ui"], tagsConfig["reactjs"]],
-    date: "September 28, 2022",
-    imgs: [app_01, app_01, app_01, app_01],
-    mainImg: app_01,
-  },
-  {
-    id: normalizeName("Portfolio 2"),
-    name: "Portfolio 2",
-    details: "Portfolio Material UI",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus an amet mauris. Morbi accumsan ipsum velit. Nam c tellus a odio tincidunt auctor a ornare odiomi. non mauris vit ae erat consequat auctor eu ine amet mau auctor a ornare odio.",
-    tags: [tagsConfig["material-ui"], tagsConfig["reactjs"]],
-    date: "September 28, 2022",
-    imgs: [app_01, app_01, app_01, app_01],
-    mainImg: app_01,
-  },
-  {
-    id: normalizeName("Portfolio 3"),
-    name: "Portfolio 3",
-    details: "Portfolio Material UI",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus an amet mauris. Morbi accumsan ipsum velit. Nam c tellus a odio tincidunt auctor a ornare odiomi. non mauris vit ae erat consequat auctor eu ine amet mau auctor a ornare odio.",
-    tags: [tagsConfig["material-ui"], tagsConfig["reactjs"]],
-    date: "September 28, 2022",
-    imgs: [app_01, app_01, app_01, app_01],
-    mainImg: app_01,
+      "Um componente para pré visualizar um produto de uma loja virtual. Feito com Material UI, ReactJs, Typescript. Testado com a biblioteca @react-library-testing e jest. Documentado com Storybook. Responsivo para desktop, tablet e mobile",
+    tags: [
+      tagsConfig["material-ui"],
+      tagsConfig["reactjs"],
+      tagsConfig["storybook"],
+      tagsConfig["typescript"],
+      tagsConfig["tests"],
+    ],
+    date: "September 20, 2022",
+    imgs: [product_preview_desktop, product_preview_mobile],
+    mainImg: product_preview_desktop,
   },
 ];
 

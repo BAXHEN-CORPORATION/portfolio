@@ -6,7 +6,7 @@ import {
   Theme,
   ThemeOptions,
 } from "@mui/material/styles";
-import red from "@mui/material/colors/red";
+import blue from "@mui/material/colors/blue";
 
 const customThemeMerge = (
   theme: ThemeOptions,
@@ -58,8 +58,9 @@ let themeOptions: ThemeOptions = {
       wordBreak: "break-word",
     },
   },
+
   palette: {
-    primary: { main: red["100"] },
+    primary: { main: blue["300"] },
     secondary: { main: "#1f1f1f" },
     common: { lynxWhite: "#f7f7f7" },
   },
@@ -137,7 +138,7 @@ themeOptions = merge<ThemeOptions, ThemeOptions>(themeOptions, {
 
             "&:hover, &:focus, &.active": {
               backgroundColor: "transparent",
-              color: red["900"],
+              color: blue["900"],
             },
             minWidth: "unset",
             "& .MuiTouchRipple-root": {

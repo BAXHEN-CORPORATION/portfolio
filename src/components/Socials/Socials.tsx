@@ -22,6 +22,7 @@ export interface SocialsProps {
     | "warning";
 
   htmlColor?: string;
+  justifyCenter?: boolean;
 }
 
 //** Default Props */
@@ -32,9 +33,19 @@ const defaultProps: Partial<SocialsProps> = {};
  *
  * @container
  */
-const Socials: React.FC<SocialsProps> = ({ socials, color, htmlColor }) => {
+const Socials: React.FC<SocialsProps> = ({
+  socials,
+  color,
+  htmlColor,
+  justifyCenter,
+}) => {
   return (
-    <Stack direction="row" gap="2rem" pl="5px">
+    <Stack
+      direction="row"
+      gap="2rem"
+      pl="5px"
+      justifyContent={justifyCenter ? "center" : undefined}
+    >
       {socials.map(({ href, Icon }, index) => (
         <IconButton
           key={index}

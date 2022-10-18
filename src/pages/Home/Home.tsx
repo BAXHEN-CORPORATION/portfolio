@@ -87,12 +87,12 @@ const Home: React.FC<HomeProps> = () => {
 
         <Stack gap="2rem" maxWidth={{ tabletLarge: "450px", mobile: "100%" }}>
           <Typography variant="main">
-            Atingir o meu potencial no design e na vida, essa é a minha paixão.
+            Alcançar o meu potencial máximo em resolução de problemas.
           </Typography>
           <Typography variant="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            fuga facere itaque mollitia blanditiis ducimus accusamus nemo fugit
-            nobis iusto.
+            Resolver problemas é o que da razão a minha existência, o que me faz
+            acordar cedo e trabalhar com dedicação. Desenvolvo aplicações web
+            responsivas, com ReactJs, Typescript e Material UI.
           </Typography>
 
           <Typography variant="topic">Minhas habilidades:</Typography>

@@ -42,10 +42,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
   }
 
   return (
-    <Stack
-      // direction={{ tabletLarge: "row", mobile: "column" }}
-      minHeight="100vh"
-    >
+    <Stack minHeight="100vh">
       <Stack
         padding={{ tabletLarge: "0 10rem", mobile: "0 3rem" }}
         width="100vw"
@@ -112,19 +109,29 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
           display="grid"
           gridTemplateColumns={{
             laptop: "repeat(2, minmax(250px, 1fr))",
-            mobile: "repeat(auto-fill, minmax(300px, 1fr))",
+            mobile: "repeat(auto-fill, minmax(250px, 1fr))",
           }}
           height="min-content"
           gap="1rem"
         >
           {project.imgs.map((img: string, index: number) => (
-            <Box key={index} height="100%" width="100%">
+            <Stack
+              direction="row"
+              key={index}
+              justifyContent="center"
+              alignItems="center"
+              overflow="hidden"
+            >
               <img
                 src={img}
-                style={{ objectFit: "cover", width: "100%" }}
+                style={{
+                  objectFit: "contain",
+                  width: "250px",
+                  height: "250px",
+                }}
                 alt="project sample"
               />
-            </Box>
+            </Stack>
           ))}
         </Box>
 
@@ -146,7 +153,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
                 {project.date}
               </Typography>
             </Stack>
-            <Stack direction="row" gap="0.5rem">
+            <Stack direction="row" gap="0.5rem" flexWrap="wrap">
               <Typography variant="section">Tags:</Typography>
               {project.tags.map((tag: any, index: number) => (
                 <Typography
@@ -164,7 +171,12 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
                 </Typography>
               ))}
             </Stack>
-            <Stack direction="row" gap="0.5rem" alignItems="center">
+            <Stack
+              direction="row"
+              gap="0.5rem"
+              alignItems="center"
+              flexWrap="wrap"
+            >
               <Typography variant="section">Share:</Typography>
               <FacebookShareButton
                 title={project.details}
