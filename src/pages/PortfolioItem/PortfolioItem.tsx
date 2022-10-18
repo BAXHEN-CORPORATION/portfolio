@@ -45,7 +45,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
     <Stack minHeight="100vh">
       <Stack
         padding={{ tabletLarge: "0 10rem", mobile: "0 3rem" }}
-        width="100vw"
+        width="100%"
         height="100px"
         direction="row"
         justifyContent="space-between"
