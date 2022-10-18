@@ -141,7 +141,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
 
           <Stack gap="0.5rem">
             <Stack direction="row" gap="0.5rem">
-              <Typography variant="section">Date:</Typography>
+              <Typography variant="section">Data:</Typography>
               <Typography
                 variant="content"
                 sx={{
