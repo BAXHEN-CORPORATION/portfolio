@@ -57,7 +57,7 @@ export const bestProjects: Project[] = [
       tagsConfig["typescript"],
       tagsConfig["tests"],
     ],
-    date: "September 20, 2022",
+    date: "Setembro 20, 2022",
     imgs: [product_preview_desktop, product_preview_mobile],
     mainImg: product_preview_desktop,
   },
