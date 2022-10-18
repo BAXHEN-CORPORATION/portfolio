@@ -47,7 +47,7 @@ export const bestProjects: Project[] = [
   {
     id: normalizeName("Product Preview"),
     name: "Product Preview",
-    details: "Portfolio Material UI",
+    details: "Componente de pré visualização de produto",
     description:
       "Um componente para pré visualizar um produto de uma loja virtual. Feito com Material UI, ReactJs, Typescript. Testado com a biblioteca @react-library-testing e jest. Documentado com Storybook. Responsivo para desktop, tablet e mobile",
     tags: [
