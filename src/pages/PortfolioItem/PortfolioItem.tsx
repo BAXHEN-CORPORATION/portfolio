@@ -17,11 +17,10 @@ import LinkedinShareButton from "react-share/lib/LinkedinShareButton";
 import TwitterShareButton from "react-share/lib/TwitterShareButton";
 
 //** Local Imports */
+import { IconButton } from "@mui/material";
 import { allProjects } from "app-data";
 import { withScrollToTop } from "hoc";
 import Error from "pages/Error";
-import { IconButton } from "@mui/material";
-import GitHub from "@mui/icons-material/GitHub";
 
 //** Typings */
 export interface PortfolioItemProps {}
