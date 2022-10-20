@@ -20,6 +20,8 @@ import TwitterShareButton from "react-share/lib/TwitterShareButton";
 import { allProjects } from "app-data";
 import { withScrollToTop } from "hoc";
 import Error from "pages/Error";
+import { IconButton } from "@mui/material";
+import GitHub from "@mui/icons-material/GitHub";
 
 //** Typings */
 export interface PortfolioItemProps {}
@@ -171,13 +173,43 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
                 </Typography>
               ))}
             </Stack>
+            {project?.resources?.length ? (
+              <Stack
+                direction="row"
+                gap="0.5rem"
+                alignItems="center"
+                flexWrap="wrap"
+              >
+                <Typography variant="section">Detalhes:</Typography>
+                {project?.resources.map(({ Icon, url }) => (
+                  <IconButton
+                    LinkComponent="a"
+                    href={url}
+                    target="__blank"
+                    disableRipple
+                    sx={{
+                      "&:hover": {
+                        background: "transparent",
+                      },
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <Icon
+                      color="secondary"
+                      sx={{ "&:hover, &:focus": { color: "primary.main" } }}
+                    />
+                  </IconButton>
+                ))}
+              </Stack>
+            ) : null}
             <Stack
               direction="row"
               gap="0.5rem"
               alignItems="center"
               flexWrap="wrap"
             >
-              <Typography variant="section">Share:</Typography>
+              <Typography variant="section">Compartilhar:</Typography>
               <FacebookShareButton
                 title={project.details}
                 quote={project.description}

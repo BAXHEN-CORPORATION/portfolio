@@ -1,5 +1,10 @@
 import { normalizeName } from "./utils";
 
+import { Visibility } from "@mui/icons-material";
+import {
+  default as GitHub,
+  default as SvgIcon,
+} from "@mui/icons-material/GitHub";
 import product_preview_desktop from "assets/projects/product_preview/product_preview_desktop.png";
 import product_preview_mobile from "assets/projects/product_preview/product_preview_mobile.png";
 
@@ -18,6 +23,10 @@ export interface Tag {
   pretty: string;
   tag: Tags;
 }
+export interface Resource {
+  Icon: typeof SvgIcon;
+  url: string;
+}
 
 export interface Project {
   id: string;
@@ -28,6 +37,7 @@ export interface Project {
   name: string;
   tags: Tag[];
   date: string;
+  resources?: Resource[];
 }
 
 type TagConfig = {
@@ -60,6 +70,16 @@ export const bestProjects: Project[] = [
     date: "Setembro 20, 2022",
     imgs: [product_preview_desktop, product_preview_mobile],
     mainImg: product_preview_desktop,
+    resources: [
+      {
+        Icon: GitHub,
+        url: "https://github.com/BAXHEN-CORPORATION/product-preview-001",
+      },
+      {
+        Icon: Visibility,
+        url: "https://classy-narwhal-e82e98.netlify.app/",
+      },
+    ],
   },
 ];
 
