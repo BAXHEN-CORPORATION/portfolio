@@ -46,8 +46,9 @@ const Socials: React.FC<SocialsProps> = ({
       pl="5px"
       justifyContent={justifyCenter ? "center" : undefined}
     >
-      {socials.map(({ href, Icon }, index) => (
+      {socials.map(({ href, Icon, name }, index) => (
         <IconButton
+          aria-label={`link to my ${name}`}
           key={index}
           LinkComponent="a"
           target="_blank"
