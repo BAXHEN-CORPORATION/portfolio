@@ -13,13 +13,6 @@ export const withScrollToTop = <
     WrappedComponent.displayName || WrappedComponent.name || "Component";
 
   const ComponentWithTheme = (props: Omit<T, keyof WithScrollToTopProps>) => {
-    // React.useEffect(() => {
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth",
-    //   });
-    // });
-
     return (
       <>
         <WrappedComponent {...(props as T)} />

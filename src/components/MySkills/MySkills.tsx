@@ -33,6 +33,7 @@ const MySkills: React.FC<MySkillsProps> = ({ skills }) => {
             </Typography>
           </Stack>
           <LinearProgress
+            aria-label={`${value} out of 100 for ${name}`}
             variant="determinate"
             color="secondary"
             sx={{ backgroundColor: "white" }}

@@ -7,6 +7,7 @@ import { user } from "app-data";
 import { navLinks } from "../../app-data/nav-links";
 import Footer from "../../containers/Footer";
 import Navbar from "../../containers/Navbar";
+import { useLocationEffect } from "hooks/use-listen-location";
 
 //** Typings */
 export interface LayoutProps {}
@@ -20,6 +21,14 @@ const defaultProps: Partial<LayoutProps> = {};
  * @surface
  */
 const Layout: React.FC<LayoutProps> = () => {
+  useLocationEffect((location) => {
+    if (location?.key !== "default") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  });
   return (
     <>
       <Navbar links={navLinks} />

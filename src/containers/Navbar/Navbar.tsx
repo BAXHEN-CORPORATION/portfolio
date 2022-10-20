@@ -75,6 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
               <Button
                 key={to}
                 variant="nav-link"
+                aria-label={`link to ${label}`}
                 className={to === pathname ? "active" : ""}
                 to={to}
                 component={Link}
@@ -87,7 +88,12 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
               </Button>
             ))}
 
-            <IconButton className="nav" size="large" onClick={onToggle}>
+            <IconButton
+              aria-label="more info button"
+              className="nav"
+              size="large"
+              onClick={onToggle}
+            >
               <DragHandleIcon htmlColor="white" fontSize="large" />
             </IconButton>
           </Stack>
