@@ -2,6 +2,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
+import Carousel from "react-material-ui-carousel";
+
 import Box from "@mui/material/Box";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import MuiLink from "@mui/material/Link";
@@ -12,12 +14,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
+import { Card, CardMedia, IconButton, Modal } from "@mui/material";
 import FacebookShareButton from "react-share/lib/FacebookShareButton";
 import LinkedinShareButton from "react-share/lib/LinkedinShareButton";
 import TwitterShareButton from "react-share/lib/TwitterShareButton";
 
 //** Local Imports */
-import { IconButton } from "@mui/material";
 import { allProjects } from "app-data";
 import { withScrollToTop } from "hoc";
 import Error from "pages/Error";
@@ -37,6 +39,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
   const params = useParams<"name">();
 
   const project = allProjects.find((project) => project.id === params.name);
+
+  const [open, setOpen] = React.useState(false);
 
   if (!project) {
     return <Error />;
@@ -107,6 +111,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
         mb="5rem"
       >
         <Box
+          component="a"
+          onClick={() => setOpen(true)}
           display="grid"
           gridTemplateColumns={{
             laptop: "repeat(2, minmax(250px, 1fr))",
@@ -114,6 +120,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
           }}
           height="min-content"
           gap="1rem"
+          sx={{ cursor: "pointer" }}
         >
           {project.imgs.map((img: string, index: number) => (
             <Stack
@@ -245,6 +252,20 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
           </Stack>
         </Stack>
       </Stack>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <Carousel swipe sx={{ margin: "10vh 10vw" }}>
+          {project?.imgs?.map((url) => (
+            <Card sx={{ height: "80vh" }}>
+              <CardMedia
+                component="img"
+                sx={{ objectFit: "contain", height: "80vh" }}
+                image={url}
+                alt="image"
+              />
+            </Card>
+          ))}
+        </Carousel>
+      </Modal>
     </Stack>
   );
 };
