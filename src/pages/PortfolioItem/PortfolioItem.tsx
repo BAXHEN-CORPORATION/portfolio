@@ -122,25 +122,27 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
           gap="1rem"
           sx={{ cursor: "pointer" }}
         >
-          {project.imgs.map((img: string, index: number) => (
-            <Stack
-              direction="row"
-              key={index}
-              justifyContent="center"
-              alignItems="center"
-              overflow="hidden"
-            >
-              <img
-                src={img}
-                style={{
-                  objectFit: "contain",
-                  width: "250px",
-                  height: "250px",
-                }}
-                alt="project sample"
-              />
-            </Stack>
-          ))}
+          {project?.imgs
+            ?.filter((_, i) => i < 4)
+            ?.map((img: string, index: number) => (
+              <Stack
+                direction="row"
+                key={index}
+                justifyContent="center"
+                alignItems="center"
+                overflow="hidden"
+              >
+                <img
+                  src={img}
+                  style={{
+                    objectFit: "contain",
+                    width: "250px",
+                    height: "250px",
+                  }}
+                  alt="project sample"
+                />
+              </Stack>
+            ))}
         </Box>
 
         <Stack gap="3rem" mb="3rem" mt="3rem">
