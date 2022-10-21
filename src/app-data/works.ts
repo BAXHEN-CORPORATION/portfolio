@@ -8,6 +8,8 @@ import {
 
 import product_preview_desktop from "assets/projects/product_preview/product_preview_desktop.png";
 import product_preview_mobile from "assets/projects/product_preview/product_preview_mobile.png";
+import product_preview_test from "assets/projects/product_preview/product_preview_test.png";
+import product_preview_storybook from "assets/projects/product_preview/product_preview_storybook.png";
 
 export const tagsNameConfig = {
   "material-ui": "material-ui",
@@ -69,7 +71,12 @@ export const bestProjects: Project[] = [
       tagsConfig["tests"],
     ],
     date: "Setembro 20, 2022",
-    imgs: [product_preview_desktop, product_preview_mobile],
+    imgs: [
+      product_preview_desktop,
+      product_preview_mobile,
+      product_preview_test,
+      product_preview_storybook,
+    ],
     mainImg: product_preview_desktop,
     resources: [
       {
