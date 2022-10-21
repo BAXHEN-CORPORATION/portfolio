@@ -1,10 +1,11 @@
 import { normalizeName } from "./utils";
 
-import { Visibility } from "@mui/icons-material";
+import Visibility from "@mui/icons-material/Visibility";
 import {
   default as GitHub,
   default as SvgIcon,
 } from "@mui/icons-material/GitHub";
+
 import product_preview_desktop from "assets/projects/product_preview/product_preview_desktop.png";
 import product_preview_mobile from "assets/projects/product_preview/product_preview_mobile.png";
 
