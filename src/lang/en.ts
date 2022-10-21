@@ -51,6 +51,7 @@ const en: LocaleObject = {
   PROJECT_01_DETAILS: "Product preview component",
   PROJECT_01_DESCRIPTION:
     "A component to preview a product from an online store. Made with Material UI, ReactJs, Typescript. Tested with @react-library-testing library and jest. Documented with Storybook. Responsive for desktop, tablet and mobile.",
+  RESUME_FILENAME: "resume-en.pdf",
 };
 
 export default en;

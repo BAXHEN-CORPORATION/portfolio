@@ -11,19 +11,20 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 //** Local Imports */
 import {
   bestProjects,
+  downloadResume,
   skills,
   socials,
+  user,
   workExperiences,
-  downloadResume,
 } from "app-data";
 import MySkills from "components/MySkills";
 import BestProjects from "components/Projects";
 import Socials from "components/Socials";
 import WorkExperiences from "components/WorkExperiences";
 import { withScrollToTop } from "hoc";
-import photo from "../../assets/main-img.png";
-import { FormattedMessage } from "react-intl";
 import { MessagesIds } from "lang/types";
+import { FormattedMessage, useIntl } from "react-intl";
+import photo from "../../assets/main-img.png";
 
 //** Typings */
 export interface HomeProps {}
@@ -37,6 +38,8 @@ const defaultProps: Partial<HomeProps> = {};
  * @page
  */
 const Home: React.FC<HomeProps> = () => {
+  const intl = useIntl();
+
   return (
     <Box
       height="min-content"
@@ -131,7 +134,9 @@ const Home: React.FC<HomeProps> = () => {
               variant="outlined"
               color="secondary"
               size="large"
-              onClick={downloadResume}
+              onClick={() =>
+                downloadResume(intl.formatMessage({ id: user.resumeFilename }))
+              }
               endIcon={<FileDownloadIcon />}
             >
               <FormattedMessage id={MessagesIds.DOWNLOAD_RESUME} />

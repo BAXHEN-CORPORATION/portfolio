@@ -50,6 +50,8 @@ export enum MessagesIds {
   PROJECT_01_DESCRIPTION = "PROJECT_01_DESCRIPTION",
 
   //
+
+  RESUME_FILENAME = "RESUME_FILENAME",
 }
 
 export type LocaleObject = { [property in SupportedMessagesIds]: string };

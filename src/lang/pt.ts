@@ -50,6 +50,8 @@ const pt: LocaleObject = {
   PROJECT_01_DETAILS: "Componente de pré-visualização de produto",
   PROJECT_01_DESCRIPTION:
     "Um componente para pré visualizar um produto de uma loja virtual. Feito com Material UI, ReactJs, Typescript. Testado com a biblioteca @react-library-testing e jest. Documentado com Storybook. Responsivo para desktop, tablet e mobile",
+
+  RESUME_FILENAME: "resume-pt.pdf",
 };
 
 export default pt;
