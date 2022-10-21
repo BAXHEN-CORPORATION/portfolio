@@ -1,8 +1,8 @@
 //** External Imports */
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet";
+import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import { Link, useParams } from "react-router-dom";
 
 import Carousel from "react-material-ui-carousel";
 
@@ -24,8 +24,8 @@ import TwitterShareButton from "react-share/lib/TwitterShareButton";
 //** Local Imports */
 import { allProjects, user } from "app-data";
 import { withScrollToTop } from "hoc";
-import Error from "pages/Error";
 import { MessagesIds } from "lang/types";
+import Error from "pages/Error";
 
 //** Typings */
 export interface PortfolioItemProps {}
