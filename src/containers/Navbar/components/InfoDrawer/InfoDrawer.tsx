@@ -15,6 +15,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import { socials } from "app-data/socials";
 import logo from "assets/logo.png";
 import Socials from "components/Socials";
+import { MessagesIds } from "lang/types";
+import { FormattedMessage } from "react-intl";
 
 //** Typings */
 export interface InfoDrawerProps {
@@ -82,9 +84,11 @@ const InfoDrawer: React.FC<InfoDrawerProps & typeof defaultProps> = ({
             <Typography variant="info-name">{name}</Typography>
           </Stack>
           <Typography variant="body1" fontWeight={500} color="white">
-            {description}
+            <FormattedMessage id={description} />
           </Typography>
-          <Typography variant="info-title">Onde me encontrar</Typography>
+          <Typography variant="info-title">
+            <FormattedMessage id={MessagesIds.WHERE_TO_FIND_ME} />
+          </Typography>
           <Typography variant="body1" fontWeight={500} color="white">
             {phone}
           </Typography>

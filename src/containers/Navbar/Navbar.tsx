@@ -1,5 +1,7 @@
 //** External Imports */
 import React from "react";
+import { FormattedMessage } from "react-intl";
+
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -84,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
                   display: { tabletLarge: "inline-flex", mobile: "none" },
                 }}
               >
-                {label}
+                <FormattedMessage id={label} />
               </Button>
             ))}
 

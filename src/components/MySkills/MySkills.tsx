@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 
 //** Local Imports */
 import { Skill } from "app-data";
+import { FormattedMessage } from "react-intl";
 
 //** Typings */
 export interface MySkillsProps {
@@ -27,9 +28,11 @@ const MySkills: React.FC<MySkillsProps> = ({ skills }) => {
       {skills.map(({ name, proficiency, value }, index) => (
         <Stack key={index} spacing={1}>
           <Stack direction="row">
-            <Typography variant="section">{name}:</Typography>
+            <Typography variant="section">
+              <FormattedMessage id={name} defaultMessage={name} />:
+            </Typography>
             <Typography variant="section" ml="auto" mr="3rem">
-              {proficiency}
+              <FormattedMessage id={proficiency} />
             </Typography>
           </Stack>
           <LinearProgress

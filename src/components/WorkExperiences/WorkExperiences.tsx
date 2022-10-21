@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 
 //** Local Imports */
 import { Experience } from "app-data";
+import { MessagesIds } from "lang/types";
+import { FormattedMessage } from "react-intl";
 
 //** Typings */
 export interface WorkExperiencesProps {
@@ -26,9 +28,11 @@ const WorkExperiences: React.FC<WorkExperiencesProps> = ({ experiences }) => {
       {experiences.map(({ title, begin, end, description }, index) => (
         <Stack key={index} gap=".75rem">
           <Typography variant="section">
-            {title} ({begin}-{end})
+            <FormattedMessage id={title} />: ({begin}-{end})
           </Typography>
-          <Typography variant="content">{description}</Typography>
+          <Typography variant="content">
+            <FormattedMessage id={description} />
+          </Typography>
         </Stack>
       ))}
     </>

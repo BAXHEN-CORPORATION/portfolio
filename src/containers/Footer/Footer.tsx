@@ -11,6 +11,8 @@ import Button from "@mui/material/Button";
 import { navLinks, socials } from "app-data";
 import logo from "assets/logo.png";
 import Socials from "components/Socials";
+import { FormattedMessage } from "react-intl";
+import { MessagesIds } from "lang/types";
 
 //** Typings */
 export interface FooterProps {
@@ -68,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
               color: "white",
             }}
           >
-            {label}
+            <FormattedMessage id={label} />
           </Button>
         ))}
       </Stack>
@@ -82,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
         </Stack>
 
         <Typography variant="content" color="white" alignSelf="center">
-          Me siga nas redes sociais:
+          <FormattedMessage id={MessagesIds.FOOTER_SOCIAL_CALL} />:
         </Typography>
 
         <Socials socials={socials} htmlColor="white" justifyCenter />
@@ -114,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
               color: "white",
             }}
           >
-            {label}
+            <FormattedMessage id={label} />
           </Button>
         ))}
       </Stack>

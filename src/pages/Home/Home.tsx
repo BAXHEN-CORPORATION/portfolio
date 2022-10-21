@@ -22,6 +22,8 @@ import Socials from "components/Socials";
 import WorkExperiences from "components/WorkExperiences";
 import { withScrollToTop } from "hoc";
 import photo from "../../assets/main-img.png";
+import { FormattedMessage } from "react-intl";
+import { MessagesIds } from "lang/types";
 
 //** Typings */
 export interface HomeProps {}
@@ -87,25 +89,27 @@ const Home: React.FC<HomeProps> = () => {
 
         <Stack gap="2rem" maxWidth={{ tabletLarge: "450px", mobile: "100%" }}>
           <Typography variant="main">
-            Alcançar o meu potencial máximo em resolução de problemas.
+            <FormattedMessage id={MessagesIds.MAIN_MESSAGE} />
           </Typography>
           <Typography variant="content">
-            Resolver problemas é o que da razão a minha existência, o que me faz
-            acordar cedo e trabalhar com dedicação. Desenvolvo aplicações web
-            responsivas, com ReactJs, Typescript e Material UI.
+            <FormattedMessage id={MessagesIds.MAIN_DESCRIPTION} />
           </Typography>
 
-          <Typography variant="topic">Minhas habilidades:</Typography>
+          <Typography variant="topic">
+            <FormattedMessage id={MessagesIds.MY_SKILLS} />:
+          </Typography>
 
           <MySkills skills={skills} />
 
           <Typography variant="topic" mt="2.5rem">
-            Experiência:
+            <FormattedMessage id={MessagesIds.WORK_EXPERIENCE} />:
           </Typography>
 
           <WorkExperiences experiences={workExperiences} />
 
-          <Typography variant="topic">Principais projetos:</Typography>
+          <Typography variant="topic">
+            <FormattedMessage id={MessagesIds.MAIN_PROJECTS} />:
+          </Typography>
 
           <Box
             display="grid"
@@ -120,8 +124,8 @@ const Home: React.FC<HomeProps> = () => {
           </Box>
           <Stack gap="2rem" maxWidth={{ tabletLarge: "500px", mobile: "100%" }}>
             <Typography variant="topic">
-              Quer saber mais? <br />
-              Olhe o meu currículo:
+              <FormattedMessage id={MessagesIds.WANNA_KNOW_MORE} /> <br />
+              <FormattedMessage id={MessagesIds.RESUME_CALL} />:
             </Typography>
             <Button
               variant="outlined"
@@ -130,7 +134,7 @@ const Home: React.FC<HomeProps> = () => {
               onClick={downloadResume}
               endIcon={<FileDownloadIcon />}
             >
-              Baixar Currículo
+              <FormattedMessage id={MessagesIds.DOWNLOAD_RESUME} />
             </Button>
           </Stack>
         </Stack>
@@ -151,7 +155,9 @@ const Home: React.FC<HomeProps> = () => {
         }}
         maxWidth={{ tabletLarge: "500px", mobile: "100%" }}
       >
-        <Typography variant="topic">Entre em contato:</Typography>
+        <Typography variant="topic">
+          <FormattedMessage id={MessagesIds.GET_IN_TOUCH} />:
+        </Typography>
         <Socials color="secondary" socials={socials} />
       </Stack>
     </Box>

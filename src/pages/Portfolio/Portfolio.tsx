@@ -14,6 +14,8 @@ import { allProjects, filters, FilterTag, Project } from "app-data";
 import BestProjects from "components/Projects";
 
 import { withScrollToTop } from "hoc";
+import { MessagesIds } from "lang/types";
+import { FormattedMessage } from "react-intl";
 
 //** Typings */
 export interface PortfolioProps {}
@@ -59,7 +61,7 @@ const Portfolio: React.FC<PortfolioProps> = () => {
         width={{ tabletLarge: "215px", mobile: "initial" }}
       >
         <Typography variant="info-title" color="black" mb="0.75rem">
-          Sort by:
+          <FormattedMessage id={MessagesIds.FILTER_LABEL} />:
         </Typography>
 
         {filters.map(({ label, tag: filterTag }) => (
@@ -69,7 +71,7 @@ const Portfolio: React.FC<PortfolioProps> = () => {
             key={filterTag}
             onClick={() => setTag(filterTag)}
           >
-            {label}
+            <FormattedMessage id={label} />
           </Button>
         ))}
       </Stack>

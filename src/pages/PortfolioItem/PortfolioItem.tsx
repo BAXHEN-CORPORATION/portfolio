@@ -23,6 +23,8 @@ import TwitterShareButton from "react-share/lib/TwitterShareButton";
 import { allProjects } from "app-data";
 import { withScrollToTop } from "hoc";
 import Error from "pages/Error";
+import { FormattedDate, FormattedMessage } from "react-intl";
+import { MessagesIds } from "lang/types";
 
 //** Typings */
 export interface PortfolioItemProps {}
@@ -67,7 +69,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
             wordWrap: "break-word",
           }}
         >
-          {project.name}
+          <FormattedMessage id={project.name} />
         </Typography>
         <Breadcrumbs
           aria-label="breadcrumb"
@@ -98,7 +100,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
             Portfolio
           </MuiLink>
           <Typography color="inherit" fontSize="14px">
-            {project.name}
+            <FormattedMessage id={project.name} />
           </Typography>
         </Breadcrumbs>
       </Stack>
@@ -146,12 +148,18 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
         </Box>
 
         <Stack gap="3rem" mb="3rem" mt="3rem">
-          <Typography variant="topic">{project.details}</Typography>
-          <Typography variant="content">{project.description}</Typography>
+          <Typography variant="topic">
+            <FormattedMessage id={project.details} />
+          </Typography>
+          <Typography variant="content">
+            <FormattedMessage id={project.description} />
+          </Typography>
 
           <Stack gap="0.5rem">
             <Stack direction="row" gap="0.5rem">
-              <Typography variant="section">Data:</Typography>
+              <Typography variant="section">
+                <FormattedMessage id={MessagesIds.PROJECT_DATE} />:
+              </Typography>
               <Typography
                 variant="content"
                 sx={{
@@ -160,11 +168,18 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
                   },
                 }}
               >
-                {project.date}
+                <FormattedDate
+                  value={new Date(project.date)}
+                  year="numeric"
+                  month="long"
+                  day="numeric"
+                />
               </Typography>
             </Stack>
             <Stack direction="row" gap="0.5rem" flexWrap="wrap">
-              <Typography variant="section">Tags:</Typography>
+              <Typography variant="section">
+                <FormattedMessage id={MessagesIds.PROJECT_TAGS} />:
+              </Typography>
               {project.tags.map((tag: any, index: number) => (
                 <Typography
                   component={Link}
@@ -176,7 +191,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
                   to="/portfolio"
                   state={{ tag: tag.tag }}
                 >
-                  {tag.pretty}
+                  <FormattedMessage id={tag.pretty} />
                   {index + 1 === project?.tags?.length ? "" : ","}
                 </Typography>
               ))}
@@ -188,7 +203,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
                 alignItems="center"
                 flexWrap="wrap"
               >
-                <Typography variant="section">Detalhes:</Typography>
+                <Typography variant="section">
+                  <FormattedMessage id={MessagesIds.PROJECT_DETAILS} />:
+                </Typography>
                 {project?.resources.map(({ Icon, url }) => (
                   <IconButton
                     LinkComponent="a"
@@ -217,7 +234,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
               alignItems="center"
               flexWrap="wrap"
             >
-              <Typography variant="section">Compartilhar:</Typography>
+              <Typography variant="section">
+                <FormattedMessage id={MessagesIds.PROJECT_SHARE} />:
+              </Typography>
               <FacebookShareButton
                 title={project.details}
                 quote={project.description}

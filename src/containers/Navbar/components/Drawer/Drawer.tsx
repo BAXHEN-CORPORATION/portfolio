@@ -11,6 +11,7 @@ import Stack from "@mui/material/Stack";
 //** Local Imports */
 
 import { NavLinks } from "../../Navbar";
+import { FormattedMessage } from "react-intl";
 
 //** Typings */
 export interface DrawerProps {
@@ -84,7 +85,7 @@ const Drawer: React.FC<DrawerProps & typeof defaultProps> = ({
                 }}
                 onClick={onToggle}
               >
-                {label}
+                <FormattedMessage id={label} />
               </Button>
             ))}
           </Stack>
