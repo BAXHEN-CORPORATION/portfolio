@@ -84,12 +84,19 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
           property="twitter:description"
           content={intl.formatMessage({ id: project.description })}
         />
-        {project?.imgs[0] ? (
-          <>
-            <meta property="twitter:image" content={project?.imgs[0]} />
-            <meta property="og:image" content={project?.imgs[0]} />
-          </>
-        ) : null}
+
+        <meta
+          property="twitter:image"
+          content={
+            "https://firebasestorage.googleapis.com/v0/b/baxhen-image-hub.appspot.com/o/product_preview_desktop.png?alt=media&token=24c4b82d-fc60-4c15-bc6b-8af5746b056a"
+          }
+        />
+        <meta
+          property="og:image"
+          content={
+            "https://firebasestorage.googleapis.com/v0/b/baxhen-image-hub.appspot.com/o/product_preview_desktop.png?alt=media&token=24c4b82d-fc60-4c15-bc6b-8af5746b056a"
+          }
+        />
       </Helmet>
       <Stack minHeight="100vh">
         <Stack
