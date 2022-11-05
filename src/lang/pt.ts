@@ -44,6 +44,7 @@ const pt: LocaleObject = {
   PROJECT_DETAILS: "Detalhes",
   PROJECT_DATE: "Data",
   PROJECT_TAGS: "Tags",
+  RESUME_FILENAME: "resume-pt.pdf",
 
   //* PROJECTS
   PROJECT_01_NAME: "Pré-visualização de produto",
@@ -51,7 +52,10 @@ const pt: LocaleObject = {
   PROJECT_01_DESCRIPTION:
     "Um componente para pré visualizar um produto de uma loja virtual. Feito com Material UI, ReactJs, Typescript. Testado com a biblioteca @react-library-testing e jest. Documentado com Storybook. Responsivo para desktop, tablet e mobile",
 
-  RESUME_FILENAME: "resume-pt.pdf",
+  PROJECT_02_NAME: "Aplicação Relógio",
+  PROJECT_02_DETAILS: "Website que mostra hora atual do usuário",
+  PROJECT_02_DESCRIPTION:
+    "Aplicação feita para desenvolver minhas habilidades não só com GraphQL, NextJs e Cypress mas também com Material UI, ReactJs, React Query e responsividade para dispositivos móveis, tablets e computadores.",
 };
 
 export default pt;

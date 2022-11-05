@@ -44,6 +44,7 @@ const en: LocaleObject = {
   PROJECT_DETAILS: "Details",
   PROJECT_DATE: "Date",
   PROJECT_TAGS: "Tags",
+  RESUME_FILENAME: "resume-en.pdf",
 
   //* PROJECTS
 
@@ -51,7 +52,11 @@ const en: LocaleObject = {
   PROJECT_01_DETAILS: "Product preview component",
   PROJECT_01_DESCRIPTION:
     "A component to preview a product from an online store. Made with Material UI, ReactJs, Typescript. Tested with @react-library-testing library and jest. Documented with Storybook. Responsive for desktop, tablet and mobile.",
-  RESUME_FILENAME: "resume-en.pdf",
+
+  PROJECT_02_NAME: "Clock App",
+  PROJECT_02_DETAILS: "Website that shows user's current time",
+  PROJECT_02_DESCRIPTION:
+    "Application made to develop my skills not only with GraphQL, NextJs and Cypress but also with Material UI, ReactJs, React Query and responsiveness for mobile devices, tablets and desktops.",
 };
 
 export default en;

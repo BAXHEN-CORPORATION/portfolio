@@ -240,7 +240,11 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
               <FacebookShareButton
                 title={project.details}
                 quote={project.description}
-                url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
+                url={
+                  project?.resources
+                    ? project?.resources[1]?.url
+                    : `${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`
+                }
                 style={{ display: "flex" }}
               >
                 <FacebookIcon
@@ -250,7 +254,11 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
               </FacebookShareButton>
               <TwitterShareButton
                 title={project.details}
-                url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
+                url={
+                  project?.resources
+                    ? project?.resources[1]?.url
+                    : `${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`
+                }
                 style={{ display: "flex" }}
               >
                 <TwitterIcon
@@ -261,7 +269,11 @@ const PortfolioItem: React.FC<PortfolioItemProps> = () => {
               <LinkedinShareButton
                 title={project.details}
                 summary={project.description}
-                url={`${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`}
+                url={
+                  project?.resources
+                    ? project?.resources[1]?.url
+                    : `${process.env.REACT_APP_LIVE_URL}/portfolio/${project.id}`
+                }
                 style={{ display: "flex" }}
               >
                 <LinkedInIcon

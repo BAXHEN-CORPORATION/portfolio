@@ -15,4 +15,8 @@ export const filters: Filter[] = [
   { label: "Typescript", tag: "typescript" },
   { label: "Storybook", tag: "storybook" },
   { label: MessagesIds.UNIT_TESTS, tag: "tests" },
+  { label: "React Query", tag: "react-query" },
+  { label: "GraphQL", tag: "graphql" },
+  { label: "NextJs", tag: "nextjs" },
+  { label: "Cypress", tag: "cypress" },
 ];

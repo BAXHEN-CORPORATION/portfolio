@@ -1,5 +1,6 @@
 //** External Imports */
 import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -23,7 +24,6 @@ import Socials from "components/Socials";
 import WorkExperiences from "components/WorkExperiences";
 import { withScrollToTop } from "hoc";
 import { MessagesIds } from "lang/types";
-import { FormattedMessage, useIntl } from "react-intl";
 import photo from "../../assets/main-img.png";
 
 //** Typings */
