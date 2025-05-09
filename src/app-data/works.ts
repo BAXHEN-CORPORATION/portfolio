@@ -25,6 +25,14 @@ import clock_app_day_quote from "assets/projects/clock_app/day_quote.png";
 import clock_app_day_details from "assets/projects/clock_app/day_details.png";
 import clock_app_cypress from "assets/projects/clock_app/cypress.png";
 
+//* Spotify Clone Images
+
+import spotify_first_load from "assets/projects/spotify_clone/spotify_first_load.png";
+import spotify_search_filter from "assets/projects/spotify_clone/spotify_search_filter.png";
+import spotify_search_shortcut from "assets/projects/spotify_clone/spotify_search_shortcut.png";
+import spotify_song_card from "assets/projects/spotify_clone/spotify_song_card.png";
+import spotify_song_selection from "assets/projects/spotify_clone/spotify_song_selection.png";
+
 export const tagsNameConfig = {
   "material-ui": "material-ui",
   reactjs: "reactjs",
@@ -36,6 +44,9 @@ export const tagsNameConfig = {
   graphql: "graphql",
   cypress: "cypress",
   "react-query": "react-query",
+  tailwind: "tailwind",
+  redux: "redux",
+  "redux-rtk": "redux-rtk",
 };
 
 export type Tags = keyof typeof tagsNameConfig;
@@ -76,6 +87,9 @@ const tagsConfig: TagConfig = {
   cypress: { tag: "cypress", pretty: "Cypress" },
   graphql: { tag: "graphql", pretty: "GraphQL" },
   "react-query": { tag: "react-query", pretty: "React Query" },
+  tailwind: { tag: "tailwind", pretty: "Tailwind CSS" },
+  "redux-rtk": { tag: "redux-rtk", pretty: "Redux ToolKit" },
+  redux: { tag: "redux", pretty: "Redux" },
 };
 
 export const bestProjects: Project[] = [
@@ -144,6 +158,39 @@ export const bestProjects: Project[] = [
       {
         Icon: Visibility,
         url: "https://clock-app.baxhen.com",
+      },
+    ],
+  },
+  {
+    id: normalizeName("Spotify Clone"),
+    name: MessagesIds.PROJECT_03_NAME,
+    details: MessagesIds.PROJECT_03_DETAILS,
+    description: MessagesIds.PROJECT_03_DESCRIPTION,
+    tags: [
+      tagsConfig["tailwind"],
+      tagsConfig["reactjs"],
+      tagsConfig["nextjs"],
+      tagsConfig["typescript"],
+      tagsConfig["redux"],
+      tagsConfig["redux-rtk"],
+    ],
+    date: "2025-05-09",
+    imgs: [
+      spotify_first_load,
+      spotify_search_filter,
+      spotify_search_shortcut,
+      spotify_song_card,
+      spotify_song_selection,
+    ],
+    mainImg: spotify_first_load,
+    resources: [
+      {
+        Icon: GitHub,
+        url: "https://github.com/baxhen/spotify-clone",
+      },
+      {
+        Icon: Visibility,
+        url: "https://spotify-clone-baxhen.netlify.app",
       },
     ],
   },

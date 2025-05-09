@@ -56,6 +56,11 @@ const pt: LocaleObject = {
   PROJECT_02_DETAILS: "Website que mostra hora atual do usuário",
   PROJECT_02_DESCRIPTION:
     "Aplicação feita para desenvolver minhas habilidades não só com GraphQL, NextJs e Cypress mas também com Material UI, ReactJs, React Query e responsividade para dispositivos móveis, tablets e computadores.",
+
+  PROJECT_03_NAME: "Clone do Spotify",
+  PROJECT_03_DETAILS: "Clone da pagina web principal do Spotify",
+  PROJECT_03_DESCRIPTION:
+    "Clone da página principal do Spotify. Feito com Tailwind CSS, ReactJs, Typescript, NextJs, Redux RTK. Desenvolvido em aproximadamente 10 horas com auxilio de ferramentas de IA.",
 };
 
 export default pt;

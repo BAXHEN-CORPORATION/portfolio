@@ -20,7 +20,7 @@ const en: LocaleObject = {
     "I worked with the development of video streaming applications via browser (WebRTC), I developed control and payments and subscriptions for an application using MongoDB, NodeJs and ReactJs. I had experience working with an international team.",
   WORK_EXPERIENCE_03_TITLE: "Freelance Developer",
   WORK_EXPERIENCE_03_DESCRIPTION:
-    "I worked developing applications in several languages with oem Python, C#, Visual Basic and Javascript. I developed robots that capture data from the internet. I gave maintenance on robots for monitoring trading sessions and bids. I developed websites for a competitive gaming agency.",
+    "I worked developing applications in several languages with Python, C#, Visual Basic and Javascript. I developed robots that capture data from the internet. I gave maintenance on robots for monitoring trading sessions and bids. I developed websites for a competitive gaming agency.",
   MAIN_PROJECTS: "Personal favorite projects",
   WANNA_KNOW_MORE: "Want to know more?",
   RESUME_CALL: "Take a look at my resume",
@@ -57,6 +57,11 @@ const en: LocaleObject = {
   PROJECT_02_DETAILS: "Website that shows user's current time",
   PROJECT_02_DESCRIPTION:
     "Application made to develop my skills not only with GraphQL, NextJs and Cypress but also with Material UI, ReactJs, React Query and responsiveness for mobile devices, tablets and desktops.",
+
+  PROJECT_03_NAME: "Spotify Clone",
+  PROJECT_03_DETAILS: "Clone of Spotify's main web page",
+  PROJECT_03_DESCRIPTION:
+    "Clone of Spotify's main page. Made with Tailwind CSS, ReactJs, Typescript, NextJs, Redux RTK. Developed in approximately 10 hours with the help of AI tools.",
 };
 
 export default en;

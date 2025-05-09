@@ -15,6 +15,11 @@ export const skills: Skill[] = [
     proficiency: MessagesIds.MY_SKILLS_ADVANCED,
   },
   {
+    name: "Tailwind CSS",
+    value: 70,
+    proficiency: MessagesIds.MY_SKILLS_INTERMEDIATE,
+  },
+  {
     name: "Javascript",
     value: 85,
     proficiency: MessagesIds.MY_SKILLS_ADVANCED,
